@@ -8,7 +8,6 @@ const Body = () => {
     <>
     <Navbar/>
     <Main/>
-    <MenuBar/>
     </>
   )
 }

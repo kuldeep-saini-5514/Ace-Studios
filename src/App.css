@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* menu bar container slider CSS */
+
+/* MenuBar.css */
+
+/* Add this to your styles.css or App.css */
+
+
+.menu-bar {
+    position:absolute;
+    right: 1rem;
+    transition: transform 0.5s ease-in-out; /* Adjust the duration as needed */
+    transform: translateX(100%); /* Initially position it outside the viewport */
+  }
+  
+  .slide-in {
+    transform: translateX(0); /* Move it to the viewport when handlebtn is true */
+  }
+  
+  

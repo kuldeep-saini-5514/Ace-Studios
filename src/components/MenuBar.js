@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MenuBar = () => {
+const MenuBar = ({setHandlebtn}) => {
   return (
-    <div className='px-20 py-5'>                                                                                                                 ;'.//     .   ./    03.6++++++++++++-+ '
-        <div className='flex gap-x-10 gap-y-2'>
+    <div className={`menu-bar ${setHandlebtn ? 'slide-in' : ''}`}>
+    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] h-[30rem]'>
+                      {/* Go back */}
+        <div className='flex items-center gap-x-10 gap-y-2 mb-8'>
         <button className="mr-6 text-base bg-purple rounded-3xl px-4 py-2 text-white">Connect with us</button>
-        <i class="fa-solid fa-xmark"></i>
+        <div onClick={()=>setHandlebtn(false)}><i class="fa-solid fa-xmark"></i></div>
         </div>
-        <div className='flex flex-col gap-y-4'>
+                      {/* Nagivate */}
+        <div className='flex flex-col gap-y-4 mb-8'>
             <Link to={"/"}>
             <h1 className='text-black text-xl'>Home</h1>
             </Link>
@@ -25,17 +28,20 @@ const MenuBar = () => {
             <h1 className='text-black text-xl'>Terms & Conditions</h1>
             </Link>
         </div>
+
+                        {/* social media handle */}
         <div>
             <p>Follow us on</p>
-            <div className='flex gap-x-4 text-2xl'>
-            <div className='text-purple bg-lightgray'><i class="fa-brands fa-instagram"></i></div>
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-linkedin-in"></i></div>
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fa-brands fa-youtube"></i></div>
+            <div className='flex gap-x-4 text-2xl mt-4'>
+            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-instagram text-base"></i></div>
+            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-facebook-f text-base"></i></div>
+            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-linkedin-in text-base"></i></div>
+            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-twitter text-base"></i></div>
+            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-youtube text-base"></i></div> 
             </div>
         </div>
-    </div>
+      </div>
+      </div>
   )
 }
 
