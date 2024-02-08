@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const MenuBar = ({setHandlebtn}) => {
   return (
     <div className={`menu-bar ${setHandlebtn ? 'slide-in' : ''}`}>
-    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] h-[30rem]'>
+    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] h-[100vh]'>
                       {/* Go back */}
         <div className='flex items-center gap-x-10 gap-y-2 mb-8'>
         <button className="mr-6 text-base bg-purple rounded-3xl px-4 py-2 text-white">Connect with us</button>
@@ -15,16 +15,22 @@ const MenuBar = ({setHandlebtn}) => {
             <Link to={"/"}>
             <h1 className='text-black text-xl'>Home</h1>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/work"}>
+            <h1 className='text-black text-xl'>Work</h1>
+            </Link>
+            <Link to={"/service"}>
+            <h1 className='text-black text-xl'>Service</h1>
+            </Link>
+            <Link to={"/about"}>
             <h1 className='text-black text-xl'>About us</h1>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/contact"}>
             <h1 className='text-black text-xl'>Contact us</h1>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/blogs"}>
             <h1 className='text-black text-xl'>Blogs</h1>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/terms"}>
             <h1 className='text-black text-xl'>Terms & Conditions</h1>
             </Link>
         </div>

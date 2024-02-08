@@ -4,7 +4,7 @@ const Main = () => {
     const [color, setColor] = useState("#ffe710");
   return (
     <>
-    <div className='flex mx-[4rem] my-[2rem] '>
+    <div className='flex mx-[4rem] my-[2rem]' >
                     {/* left container */}
         <div className='w-[45rem] flex flex-col gap-y-4'>
             <div className='flex items-center rounded-xl w-[19rem] py-3 px-2 bg-lightgray'>
