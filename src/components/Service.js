@@ -10,7 +10,7 @@ const Service = () => {
           </h1>
           <h3 className="text-center">
             {" "}
-            lorem10 lorem10 lorem10 lorem10 lorem10 lorem10 lorem10
+            Welcome to Finick, where we pave the path to digital success with our comprehensive suite of innovative IT services. As your strategic partner in the digital realm, we specialize in:
           </h3>
         </div>
 
