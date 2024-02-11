@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* menu bar container slider CSS */
+
+/* MenuBar.css */
+
+/* Add this to your styles.css or App.css */
+
+body{
+  overflow-x: hidden;
+}
+.menu-bar {
+    position:absolute;
+    right: 0rem;
+    animation: move 0.5s ease-in-out;
+    transform: translateX(100%);
+  }
+  @keyframes move {
+    0%{
+      right: 0rem;
+    }
+  }
+  
+  .slide-in {
+    right: 24rem;
+  }
+
+
+  
+  p{
+    color: #eeeef0;
+  }
+
+  input{
+    width: 15rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 5rem;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+  }
