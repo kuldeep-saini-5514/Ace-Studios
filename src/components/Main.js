@@ -103,31 +103,39 @@ const Main = () => {
       <img className="h-96" src={require(`./Images/laptop-1.jpeg`)} alt="" />
       </div>
                 {/* right Container */}
-      <div className="mx-5 text-black">
-          <h1>Our Process </h1>
+      <div className="mx-12 text-black">
+          <h1 className="text-4xl text-black font-semibold">Our Process </h1>
           <p className="text-black"> Your vision, our expertise. From websites to AR, we craft tailored solutions through a collaborative process, unlocking success for every project.</p>
-          <div className="text-black"> <i class="fa-solid fa-rocket"></i>
-            <p className="text-black">Discovery</p>
+          <div className="text-black flex "> <i class="fa-solid fa-rocket"></i>
+            <div className="flex  flex-col">
+            <p className="text-black text-2xl font-medium">Discovery</p>
             <p className="text-black"> Dive deep into your vision: We actively listen and understand your unique goals, challenges, and audience. Strategic planning ensures measurable success with open communication throughout. </p>
+            </div>
           </div>
           <div className="text-black"><i class="fa-solid fa-lightbulb"></i>
-            <p className="text-black">Plan</p>
+            <div className="flex  flex-col">
+            <p className=" text-black text-2xl font-medium">Plan</p>
             <p className="text-black"> We craft a clear roadmap together, leveraging expertise to guide your project. Flexibility is key; we adapt to your preferences, be it agile sprints or structured approaches. </p>
+            </div>
           </div>
           <div className="text-black"><i class="fa-solid fa-rocket"></i>
-            <p className="text-black">Execute</p>
+          <div className="flex  flex-col">
+          <p className="text-black text-2xl font-medium">Execute</p>
             <p className="text-black"> Seamless teamwork ensures efficient delivery with rigorous quality control. Regular feedback keeps you informed and involved, shaping the project's outcome every step of the way. </p>
           </div>
+          </div>
           <div className="text-black"><i class="fa-solid fa-rocket"></i>
-            <p className="text-black">Deliver</p>
+            <div className="flex  flex-col">
+            <p className="text-black text-2xl font-medium">Deliver</p>
             <p className="text-black"> Exceeding expectations, we deliver a product that aligns perfectly with your goals. Beyond launch, ongoing support optimizes long-term success, building trust and value for future collaborations. </p>
+            </div>
           </div>
         </div>   
      </div>
       </div>
 
       {/* //Center box  */}
-      <div className="flex m-5">
+      <div className="flex m-5 mt-12 mb-12">
         {/* left box */}
         <div className="w-1/2 text-3xl font-semibold">
         We’re a lean creative agency that uses design and code to solve problems.
@@ -139,20 +147,96 @@ const Main = () => {
       </div>
 
       {/* another box */}
-      <div>
+      <div className="flex m-2" >
         {/* left- image box */}
         <div>
-        <img className="h-96" src={require(`./Images/laptop-1.jpeg`)} alt="" />
+        <img className="h-96 m-2" src={require(`./Images/laptop-1.jpeg`)} alt="" />
         </div>
         {/* right box */}
-        <div>
-          <h1>Designed and built by an astonishing creative team.</h1>
-          <p>Empowering businesses with innovative solutions and tangible results, our expert team is dedicated to helping you reach your objectives with confidence.</p>
-          <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
+        <div className="m-7 flex flex-col justify-center align- gap-5 ">
+          <h1 className="text-4xl font-semibold">Designed and built by an astonishing creative team.</h1>
+          <p className="text-black">Empowering businesses with innovative solutions and tangible results, our expert team is dedicated to helping you reach your objectives with confidence.</p>
+          <button className="text-base w-28 bg-purple rounded-3xl px-4 py-2 text-white">
               About us
             </button>
         </div>
       </div>
+
+      {/* //Contact  */}
+      <div>
+      <div className="flex-col text-center">
+        <h1>Contact us</h1>
+        <p>Felis nunc, aliquet quam dictum senectus nunc.</p>
+      </div>
+
+      <div className="flex m-10 bg-white shadow-2xl rounded-3xl">
+        {/* //left side */}
+        <div className="bg-purple text-white rounded-xl px-8 py-6 w-[25rem] h-[30rem]">
+          <div>
+            <h1 className="text-xl font-semibold mb-2"> Contact Information</h1>
+            <p className="mb-10">
+              {" "}
+              If you like to work with us then drop us a message
+            </p>
+          </div>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
+            <i class="fa-light fa-mobile mr-10 text-purple"></i>
+            <span>9560532957</span>
+          </div>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
+            <i class="fa-light fa-mobile mr-10  text-purple"></i>
+            <span>9560532957</span>
+          </div>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
+            <i class="fa-light fa-mobile mr-10  text-purple"></i>
+            <span>9560532957</span>
+          </div>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
+            <i class="fa-light fa-mobile mr-10  text-purple"></i>
+            <span>9560532957</span>
+          </div>
+        </div>
+
+        {/* //right side  */}
+        <div className="">
+          <form class="flex flex-wrap ml-10 w-[40rem]">
+            <div>
+              <h1>Full Name</h1>
+              <input type="text" />
+            </div>
+            <div>
+              <h1>Email</h1>
+              <input type="email" />
+            </div>
+            <div>
+              <h1>Phone</h1>
+              <input type="email" />
+            </div>
+            <div>
+              <h1>Email</h1>
+              <input type="email" />
+            </div>
+            <input
+              placeholder="Rating (1-5)"
+              class="bg-gray-700 text-black border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              type="number"
+            />
+            <textarea
+              placeholder="Feedback"
+              class="bg-gray-700 text-black border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-purple focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              name="feedback"
+            />
+
+            <button
+              class="bg-gradient-to-r from-blue-500 to-blue-500 text-blackfont-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     </>
   );
 };
