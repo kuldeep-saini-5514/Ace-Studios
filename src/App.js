@@ -17,7 +17,8 @@ const App = () => {
   
   return (
   <>
-    <Navbar/>
+  <div className='sticky'> <Navbar/></div>
+   
   
       <Outlet/>
     
