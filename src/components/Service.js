@@ -8,19 +8,19 @@ const Service = () => {
           <h1 className="text-center text-4xl font-bold">
             Services We Provided
           </h1>
-          <h3 className="text-center">
+          <p className="text-center text-black text-2xl">
             {" "}
             Welcome to Finick, where we pave the path to digital success with our comprehensive suite of innovative IT services. As your strategic partner in the digital realm, we specialize in:
-          </h3>
+          </p>
         </div>
 
         {/* Boxes */}
         <div className="flex flex-wrap justify-around align-middle m-4 gap-4">
           <div className=" h-1/3 w-2/6 m-3 p-4 shadow-lg rounded-3xl hover:border-blue">
           <div className="rounded-full bg-lightgray mb-2 h-10 w-10 flex justify-center items-center"><i class="fa-solid fa-globe text-xl text-purple"></i></div>
-            <h3 className="text-lg font-bold mb-3"> Mobile Development</h3>
+            <h3 className="text-lg font-bold mb-3"> Mobile App Design</h3>
             <p>
-              lorem10 lorem10 lorem10 lorem10 lorem10 lorem10 lorem10 lorem10
+            Viverra ut potenti aliquam feugiat dui imperdiet laoreet tempus sed. Elit cursus est lorem in est id nec. Quis diam posuere at nisl eget turpis sagittis nunc. Aliquet et ultrices purus, id. Sagittis erat nunc in parturient.
               lorem10
             </p>
             <div className="flex mt-4">

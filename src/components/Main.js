@@ -44,28 +44,28 @@ const Main = () => {
         <div className="flex flex-wrap text-black">
           <div className="h-4/6 w-[33.3%] shadow-lg p-5 m-6">
           <i class="fa-solid fa-gears"></i> 
-            <h1>Mobile App Development</h1>
+            <h4>Mobile App Development</h4>
             <p className=" text-black">
             Unleash the Power of Mobile with Custom App Development
             </p>
           </div>
           <div className="h-4/6 w-[33.3%] shadow-lg p-5 m-6">
           <i class="fa-solid fa-code"></i>
-            <h1>Website Development</h1>
+            <h4>Website Development</h4>
             <p className=" text-black">
             Craft Powerful Digital Experiences with Cutting-Edge Web Development
             </p>
           </div>
           <div className="h-4/6 w-[33.3%] shadow-lg p-5 m-6">
           <i class="fa-solid fa-palette"></i>
-            <h1>Design</h1>
+            <h4>Design</h4>
             <p className=" text-black">
             Elevate Your Brand with Strategic Web & App Design Solutions
             </p>
           </div>
           <div className="h-4/6 w-[33.3%] shadow-lg p-5 m-6">
           <i class="fa-solid fa-lock"></i>
-            <h1>AR Solution</h1>
+            <h4>AR Solution</h4>
             <p className=" text-black">
             Reimagine Your Business with Immersive Augmented Reality Solutions
             </p>
@@ -77,7 +77,7 @@ const Main = () => {
       {/* Work Start */}
       <div className="flex justify-center align-middle">
         <div>
-        <h1 className="text center">Companies We Work With</h1>
+        <h5 className="text center">Companies We Work With</h5>
         <p>
         We partner with awesome companies like yours, building cool stuff and making a real impact together.
         </p>
@@ -162,6 +162,17 @@ const Main = () => {
         </div>
       </div>
 
+      {/* TESTIMONIALS */}
+      <div>
+        {/* left */}
+        <div>
+        <img className="" src={require('./Images/Huawei-logo-A8C7CBCAA8-seeklogo.com.png')} alt="logo" />
+        </div>
+        <div>
+
+        </div>
+      </div>
+
       {/* //Contact  */}
       <div>
       <div className="flex-col text-center">
@@ -179,21 +190,23 @@ const Main = () => {
               If you like to work with us then drop us a message
             </p>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10 text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+          <i class="fa-solid fa-mobile mr-10 text-purple"></i>
+            <span>+91 9720623941</span>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 ">
+            <div className="flex">
+            <i class="fa-solid fa-envelope mr-10 text-purple"></i>
+            <span>abhinay@finick.xyz</span>
+            </div>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 mr-5">
+          <i class="fa-solid fa-globe mr-10 text-purple"></i>
+            <span>www.finick.com</span>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+          <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
+            <span>India</span>
           </div>
         </div>
 

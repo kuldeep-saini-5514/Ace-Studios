@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div>
       <div className="flex-col text-center">
-        <h1>Contact us</h1>
+        <h3>Contact us</h3>
         <p>Felis nunc, aliquet quam dictum senectus nunc.</p>
       </div>
 
@@ -12,27 +12,29 @@ const Contact = () => {
         {/* //left side */}
         <div className="bg-purple text-white rounded-xl px-8 py-6 w-[25rem] h-[30rem]">
           <div>
-            <h1 className="text-xl font-semibold mb-2"> Contact Information</h1>
+            <h5 className="text-xl font-semibold mb-2"> Contact Information</h5>
             <p className="mb-10">
               {" "}
               If you like to work with us then drop us a message
             </p>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10 text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+          <i class="fa-solid fa-mobile mr-10 text-purple"></i>
+            <span>+91 9720623941</span>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 ">
+            <div className="flex">
+            <i class="fa-solid fa-envelope mr-10 text-purple"></i>
+            <span>abhinay@finick.xyz</span>
+            </div>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 mr-5">
+          <i class="fa-solid fa-globe mr-10 text-purple"></i>
+            <span>www.finick.com</span>
           </div>
-          <div className="bg-white h-10 w-10 flex px-3 py-1.5 mb-2 rounded-full mb-6">
-            <i class="fa-light fa-mobile mr-10  text-purple"></i>
-            <span>9560532957</span>
+          <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+          <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
+            <span>India</span>
           </div>
         </div>
 
@@ -40,19 +42,19 @@ const Contact = () => {
         <div className="">
           <form class="flex flex-wrap ml-10 w-[40rem]">
             <div>
-              <h1>Full Name</h1>
+              <h5>Full Name</h5>
               <input type="text" />
             </div>
             <div>
-              <h1>Email</h1>
+              <h5>Email</h5>
               <input type="email" />
             </div>
             <div>
-              <h1>Phone</h1>
+              <h5>Phone</h5>
               <input type="email" />
             </div>
             <div>
-              <h1>Email</h1>
+              <h5>Email</h5>
               <input type="email" />
             </div>
             <input

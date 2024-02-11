@@ -27,6 +27,9 @@ const MenuBar = ({setHandlebtn}) => {
             <Link to={"/terms"}>
             <h1 className='text-black text-xl'>Terms & Conditions</h1>
             </Link>
+            <Link to={"/privacy"}>
+            <h1 className='text-black text-xl'>Privacy</h1>
+            </Link>
         </div>
 
                         {/* social media handle */}

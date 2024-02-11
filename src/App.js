@@ -12,6 +12,7 @@ import Error from './components/Error'
 import Terms from './components/Terms'
 
 import Service from './components/Service'
+import Privacy from './components/Privacy'
 
 const App = () => {
   
@@ -51,6 +52,11 @@ const AppRouter=createBrowserRouter([
       {
         path:"terms",
         element:<Terms/>
+      },
+    
+      {
+        path:"privacy",
+        element:<Privacy/>
       }
     ]
   }
