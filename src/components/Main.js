@@ -4,17 +4,20 @@ const Main = () => {
   const [color, setColor] = useState("#ffe710");
   return (
     <>
-      <div className="flex mx-[4rem] my-[2rem]">
+      <div className="flex mx-[4rem] mt-20 my-[2rem]" style={{
+              backgroundImage: `url(${require("./Images/bg_logo.png")})`,
+              backgroundSize: "cover",
+            }}>
         {/* left container */}
         <div className="w-[45rem] flex flex-col gap-y-4">
-          <div className="flex items-center rounded-xl w-[19rem] py-3 px-2 bg-lightgray">
-            <i
+          <div className="flex items-center rounded-xl w-[19rem]  px-2 bg-lightgray">
+         <i
               className="fa-solid fa-circle fa-2xl"
               style={{ color: `${color}` }}
             ></i>
-            <p className="ml-4 text-black">#1 Digital company in the town!</p>
+            <p className="ml-4 pt-5 text-black">#1 Digital company in the town!</p>
           </div>
-          <h1 className="text-black text-4xl font-bold w-[15rem]">
+          <h1 className="text-black text-4xl font-bold w-[18rem]">
             Tech Solutions Tailored for Growth
           </h1>
           <p className="text-gray w-[95%]">
@@ -107,7 +110,7 @@ const Main = () => {
         {/* Left container */}
         <div className="flex m-2 p-5">
           <div>
-            <img src={require(`./Images/laptop-1.jpeg`)} alt="" />
+            <img className="rounded-xl" src={require(`./Images/laptop-1.jpeg`)} alt="" />
           </div>
           {/* right Container */}
           <div className="mx-12 text-black">
@@ -206,17 +209,17 @@ const Main = () => {
         {/* left- image box */}
         <div>
           <img
-            className="h-[30rem] w-[35rem] rounded-xl  m-2"
+            className="h-[30rem] w-[40rem] rounded-xl  m-2"
             src={require(`./Images/Group.jpeg`)}
             alt=""
           />
         </div>
         {/* right box */}
         <div className="m-7 flex flex-col pl-20 justify-center gap-5 ">
-          <p className="text-4xl w-[20rem] font-semibold">
+          <p className="text-4xl m-0 w-[20rem] font-semibold">
             Designed and built by an astonishing creative team.
           </p>
-          <p className="text-gray  w-[28rem]">
+          <p className="text-gray m-0  w-[28rem]">
             Empowering businesses with innovative solutions and tangible
             results, our expert team is dedicated to helping you reach your
             objectives with confidence.
@@ -344,7 +347,7 @@ const Main = () => {
 
         <div className="flex m-10 text-white bg-white shadow-2xl rounded-3xl">
           {/* //left side */}
-          <div className="bg-purple text-white rounded-xl px-8 py-6 w-[25rem] h-[30rem]">
+          <div className="bg-purple text-white rounded-xl px-8 py-6 w-[25rem] h-[40rem]">
             <div>
               <p className="text-2xl font-semibold mb-2">
                 {" "}
@@ -392,7 +395,7 @@ const Main = () => {
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p>What Service do you need?</p>
+                <p className="mt-10">What Service do you need?</p>
                 <div className="flex flex-wrap gap-x-20 gap-y-5 ">
                   <div className="">
                   <label class="container">
@@ -429,7 +432,10 @@ const Main = () => {
                       <span class="checkmark"></span>
                     </label>
                   </div>
+
                 </div>
+                  <p className="mt-10 text-xl font-normal">Message</p>
+                  <input type="text" className="msg-input w-[100%] focus:outline-none" placeholder="Write your message..." />
               </div>
             </form>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MenuBar from "./MenuBar";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [handlebtn,setHandlebtn] = useState(false)
 
@@ -11,11 +12,13 @@ const Navbar = () => {
     <div className="flex justify-between px-16 py-5 shadow-lg " id="navbar-container">
       {/* Logo */}
       <div className="" id="nav-left">
-      <div className="flex"><span className="pr-1 text-yellow">Ace </span> <h4> Studios</h4></div>
+      <div className="flex"><span className="pr-1 text-yellow text-2xl">Ace </span> <h5> Studios</h5></div>
       </div>
       {/* contatct-btn */}
       <div className="flex justify-between gap-x-10 " id="nav-right">
+        <Link to={"contact"}>
         <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">Connect with us</button>
+        </Link>
       {/* menubar - icon */}
         <button onClick={handlemenuclick}><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
       </div>

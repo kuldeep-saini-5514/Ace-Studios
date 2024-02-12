@@ -34,7 +34,7 @@ body{
     margin-right: 5rem;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
     color: black;
   }
   .contact-input:focus{
@@ -84,4 +84,14 @@ body{
     color: #fff;
     background-color: #6854fc;
     border-radius: 50%;
+  }
+
+  
+  .msg-input{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 0.5rem;
+  }
+
+  .msg-input:focus{
+    border-bottom: 1px solid #6854fc;
   }

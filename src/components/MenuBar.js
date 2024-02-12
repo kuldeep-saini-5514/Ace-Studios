@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const MenuBar = ({setHandlebtn}) => {
   return (
@@ -7,7 +7,9 @@ const MenuBar = ({setHandlebtn}) => {
     <div className='px-20 py-5 bg-white shadow-lg w-[27rem] h-[100vh]'>
                       {/* Go back */}
         <div className='flex items-center gap-x-10 gap-y-2 mb-8'>
+        <Link to={"contact"}>
         <button className="mr-6 text-base bg-purple rounded-3xl px-4 py-2 text-white">Connect with us</button>
+        </Link>
         <div onClick={()=>setHandlebtn(false)}><i class="fa-solid fa-xmark"></i></div>
         </div>
                       {/* Nagivate */}

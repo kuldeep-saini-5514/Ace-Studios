@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
-    <div className='flex flex-col text-white bg-black '> 
+    <div className='flex flex-col mt-20 text-white bg-black '> 
       <div>
       <h1 className='text-center font-bold text-4xl text-white mt-5'>Finick</h1>
 
@@ -20,12 +20,12 @@ const Footer = () => {
 
 
       {/* icon section */}
-      <div className='mt-6 flex gap-10 justify-center align-middle'>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-linkedin"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-youtube"></i>
+      <div className='mt-6 flex gap-x-16 justify-center align-middle'>
+      <i class="fa-brands fa-instagram text-4xl"></i>
+      <i class="fa-brands fa-facebook text-4xl"></i>
+      <i class="fa-brands fa-linkedin text-4xl"></i>
+      <i class="fa-brands fa-twitter text-4xl"></i>
+      <i class="fa-brands fa-youtube text-4xl"></i>
       </div>
 
       {/* copyright section */}
