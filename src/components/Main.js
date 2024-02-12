@@ -231,27 +231,83 @@ const Main = () => {
       <div className="flex mt-20 justify-center items-center">
         {/* left */}
         <div className="h-[30rem] w-[160rem] m-5">
-          <div className="absolute left-[14rem] w-[8rem] h-[8rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-1.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[25rem] top-[221rem] w-[6rem] h-[6rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-2.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute top-[224rem] w-[8rem] h-[8rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-3.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[12rem] top-[231rem] w-[7rem] h-[7rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-4.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[22rem] top-[230rem] w-[7rem] h-[7rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-5.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[33rem] top-[226rem] w-[6rem] h-[6rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-6.jpeg')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[2rem] top-[236rem] w-[8rem] h-[8rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-8.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[16rem] top-[240rem] w-[8rem] h-[8rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-3.png')})`,backgroundSize:"cover"}}></div>
-          <div className="absolute left-[30rem] top-[237rem] w-[8rem] h-[8rem] rounded-xl"  style={{backgroundImage: `url(${require('./Images/TS-9.png')})`,backgroundSize:"cover"}}></div>
-      </div>
+          <div
+            className="absolute left-[14rem] w-[8rem] h-[8rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-1.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[25rem] top-[221rem] w-[6rem] h-[6rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-2.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute top-[224rem] w-[8rem] h-[8rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-3.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[12rem] top-[231rem] w-[7rem] h-[7rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-4.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[22rem] top-[230rem] w-[7rem] h-[7rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-5.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[33rem] top-[226rem] w-[6rem] h-[6rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-6.jpeg")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[2rem] top-[236rem] w-[8rem] h-[8rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-8.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[16rem] top-[240rem] w-[8rem] h-[8rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-3.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <div
+            className="absolute left-[30rem] top-[237rem] w-[8rem] h-[8rem] rounded-xl"
+            style={{
+              backgroundImage: `url(${require("./Images/TS-9.png")})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+        </div>
         {/* right */}
         <div>
-          <p className="font-semibold text-[2rem] leading-10 w-[25rem]">Meet Client Satisfaction After Working With Us</p>
+          <p className="font-semibold text-[2rem] leading-10 w-[25rem]">
+            Meet Client Satisfaction After Working With Us
+          </p>
           <p className="font-semibold m-0 p-0">Doesn't feel like an agency</p>
           {/* icons */}
           <div className="text-yellow mb-2 mt-2">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
           {/* icons */}
           <p className="text-gray">
@@ -260,12 +316,17 @@ const Main = () => {
             temporibus expedita sequi omnis commodi! Eligendi, beatae animi ut
             praesentium possimus natus totam! Voluptates quidem earum nemo
             harum, pariatur soluta cumque eaque molestias aut facilis
-            
           </p>
           {/* User */}
           <div className="flex">
             {/* left */}
-            <div className="w-[4rem] h-[4rem] rounded-xl"style={{backgroundImage: `url(${require("./Images/TS-logo.png")})`,backgroundSize: "100% 110%",}}></div>
+            <div
+              className="w-[4rem] h-[4rem] rounded-xl"
+              style={{
+                backgroundImage: `url(${require("./Images/TS-logo.png")})`,
+                backgroundSize: "100% 110%",
+              }}
+            ></div>
             {/* right */}
             <div className="flex flex-col ml-5">
               <p className="p-0 font-semibold m-0">Gwen Stacy</p>
@@ -294,64 +355,85 @@ const Main = () => {
                 If you like to work with us then drop us a message
               </p>
             </div>
-            <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+            <div className="bg-white h-10 w-10 flex p-3 rounded-full mb-6">
               <i class="fa-solid fa-mobile mr-10 text-purple"></i>
               <span>+919720623941</span>
             </div>
-            <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 ">
-              <div className="flex">
-                <i class="fa-solid fa-envelope mr-10 text-purple"></i>
-                <span>abhinay@finick.xyz</span>
-              </div>
+            <div className="bg-white h-10 w-10 flex p-3  rounded-full mb-6 ">
+              <i class="fa-solid fa-envelope mr-10 text-purple"></i>
+              <span>abhinay@finick.xyz</span>
             </div>
-            <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6 mr-5">
+            <div className="bg-white h-10 w-10 flex p-3  rounded-full mb-6 mr-5">
               <i class="fa-solid fa-globe mr-10 text-purple"></i>
               <span>www.finick.com</span>
             </div>
-            <div className="bg-white h-10 w-10 flex px-3 py-1.5  rounded-full mb-6">
+            <div className="bg-white h-10 w-10 flex p-3  rounded-full mb-6">
               <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
               <span>India</span>
             </div>
           </div>
           {/* right side */}
-          <div className="">
-          <form class="flex flex-wrap ml-10 w-[40rem]">
-            <div>
-              <h5>Full Name</h5>
-              <input type="text" />
-            </div>
-            <div>
-              <h5>Email</h5>
-              <input type="email" />
-            </div>
-            <div>
-              <h5>Phone</h5>
-              <input type="email" />
-            </div>
-            <div>
-              <h5>Email</h5>
-              <input type="email" />
-            </div>
-            <input
-              placeholder="Rating (1-5)"
-              class="bg-gray-700 text-black border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="number"
-            />
-            <textarea
-              placeholder="Feedback"
-              class="bg-gray-700 text-black border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-purple focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              name="feedback"
-            />
-
-            <button
-              class="bg-gradient-to-r from-blue-500 to-blue-500 text-blackfont-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
+          <div className=" text-black">
+            <form class="flex flex-wrap ml-10 w-[40rem]">
+              <div>
+                <p className="text-black text-xl  m-0 mb-2 mt-8">First Name</p>
+                <input className="contact-input" type="text" />
+              </div>
+              <div>
+                <p className="text-black text-xl m-0 mb-2 mt-8">Last Name</p>
+                <input className="contact-input" type="email" />
+              </div>
+              <div>
+                <p className="text-black text-xl m-0 mb-2 mt-10">Email</p>
+                <input className="contact-input" type="email" />
+              </div>
+              <div>
+                <p className="text-black text-xl m-0 mb-2 mt-10">Phone</p>
+                <input className="contact-input" type="email" />
+              </div>
+              <div>
+                <p>What Service do you need?</p>
+                <div className="flex flex-wrap gap-x-20 gap-y-5 ">
+                  <div className="">
+                  <label class="container">
+                      Web Design
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                  <label class="container">
+                      App Design
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                  <label class="container">
+                      Graphic Design
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                  <label class="container">
+                      Digital Marketing
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                  <label class="container">
+                      Other
+                      <input type="checkbox" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        </div>        
       </div>
     </>
   );
