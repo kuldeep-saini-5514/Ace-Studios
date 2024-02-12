@@ -126,7 +126,7 @@ const Main = () => {
               </div>
               <p className="text-black text-2xl font-semibold">Discovery</p>
               </div>
-              <p className="pl-9 pt-2 text-gray">
+              <p className="pl-14 pt-2 text-gray">
                   {" "}
                   Dive deep into your vision: We actively listen and understand
                   your unique goals, challenges, and audience. Strategic
@@ -137,11 +137,11 @@ const Main = () => {
             <div className="text-black">
               <div className="flex gap-4">
               <div className="flex justify-center items-center bg-lightblue h-10 w-10 rounded-xl">
-              <i class="fa-solid fa-lightbulb text-xl"></i>
+              <i class="fa-solid fa-lightbulb text-xl text-DarkBlue"></i>
               </div>
               <p className="text-black text-2xl font-semibold">Plan</p>
               </div>
-              <p className="pl-9 pt-2 text-gray">
+              <p className="pl-14 pt-2 text-gray">
                   {" "}
                   We craft a clear roadmap together, leveraging expertise to
                   guide your project. Flexibility is key; we adapt to your
@@ -151,11 +151,11 @@ const Main = () => {
             <div className="text-black">
               <div className="flex gap-4">
               <div className="flex justify-center items-center bg-lightgreen h-10 w-10 rounded-xl">
-              <i class="fa-solid fa-rocket text-xl"></i>
+              <i class="fa-solid fa-rocket text-xl text-green"></i>
               </div>
               <p className="text-black text-2xl font-semibold">Execute</p>
               </div>
-              <p className="pl-9 pt-2 text-gray">
+              <p className="pl-14 pt-2 text-gray">
                   {" "}
                   Seamless teamwork ensures efficient delivery with rigorous
                   quality control. Regular feedback keeps you informed and
@@ -165,11 +165,11 @@ const Main = () => {
             <div className="text-black">
               <div className="flex gap-4">
               <div className="flex justify-center items-center bg-lightyellow h-10 w-10 rounded-xl">
-              <i class="fa-solid fa-rocket text-lg"></i>
+              <i class="fa-solid fa-rocket text-lg text-DarkYellow"></i>
               </div>
               <p className="text-black text-2xl font-semibold">Deliver</p>
               </div>
-              <p className="pl-9 pt-2 text-gray">
+              <p className="pl-14 pt-2 text-gray">
                   {" "}
                   Exceeding expectations, we deliver a product that aligns
                   perfectly with your goals. Beyond launch, ongoing support
@@ -183,19 +183,19 @@ const Main = () => {
       </div>
 
       {/* //Center box  */}
-      <div className="flex  m-5 mt-12 mb-12">
+      <div className="flex bg-LightGray p-10 m-5 mt-12 mb-12">
         {/* left box */}
-        <div className="w-1/2 text-3xl font-semibold">
+        <div className="w-[90rem] h-[10rem]  text-3xl font-semibold">
           We’re a lean creative agency that uses design and code to solve
           problems.
         </div>
         {/* right box */}
-        <div className="w-1/2">
-          We don't just build solutions, we tailor them to your unique needs.
+        <div>
+          <p className="pl-10 ml-4 h-[10rem] text-lg border-l-[3px] border-Gray  text-gray">We don't just build solutions, we tailor them to your unique needs.
           From data-driven insights to agile collaboration, we work closely with
           you to deliver cutting-edge solutions that drive real results. Backed
           by a proven track record of success, we're your trusted partner in
-          achieving your digital goals.
+          achieving your digital goals.</p>
         </div>
       </div>
 
@@ -204,17 +204,17 @@ const Main = () => {
         {/* left- image box */}
         <div>
           <img
-            className="h-96 m-2"
-            src={require(`./Images/laptop-1.jpeg`)}
+            className="h-[30rem] w-[35rem] rounded-xl  m-2"
+            src={require(`./Images/Group.jpeg`)}
             alt=""
           />
         </div>
         {/* right box */}
-        <div className="m-7 flex flex-col justify-center align- gap-5 ">
-          <h1 className="text-4xl font-semibold">
+        <div className="m-7 flex flex-col pl-20 justify-center gap-5 ">
+          <p className="text-4xl w-[20rem] font-semibold">
             Designed and built by an astonishing creative team.
-          </h1>
-          <p className="text-black">
+          </p>
+          <p className="text-gray  w-[28rem]">
             Empowering businesses with innovative solutions and tangible
             results, our expert team is dedicated to helping you reach your
             objectives with confidence.

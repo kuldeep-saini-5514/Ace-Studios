@@ -15,24 +15,24 @@ const MenuBar = ({setHandlebtn}) => {
             <Link to={"/"}>
             <h1 className='text-black text-xl'>Home</h1>
             </Link>
-            <Link to={"/work"}>
-            <h1 className='text-black text-xl'>Work</h1>
-            </Link>
+           
             <Link to={"/service"}>
             <h1 className='text-black text-xl'>Service</h1>
             </Link>
-            <Link to={"/about"}>
-            <h1 className='text-black text-xl'>About us</h1>
-            </Link>
+           
             <Link to={"/contact"}>
             <h1 className='text-black text-xl'>Contact us</h1>
             </Link>
-            <Link to={"/blogs"}>
-            <h1 className='text-black text-xl'>Blogs</h1>
-            </Link>
+           
             <Link to={"/terms"}>
             <h1 className='text-black text-xl'>Terms & Conditions</h1>
             </Link>
+
+            <Link to={"/privacy"}>
+            <h1 className='text-black text-xl'>Privacy</h1>
+            </Link>
+
+
         </div>
 
                         {/* social media handle */}

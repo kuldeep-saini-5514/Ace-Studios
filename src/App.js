@@ -5,13 +5,14 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
-import About from './components/About'
+
 import Main from './components/Main'
 import Error from './components/Error'
-import Blogs from './components/Blogs'
+
 import Terms from './components/Terms'
-import Work from './components/Work'
+
 import Service from './components/Service'
+import Privacy from './components/Privacy'
 
 const App = () => {
   
@@ -36,29 +37,23 @@ const AppRouter=createBrowserRouter([
         path:"/",
       element:<Main/>,
     },
-      {
-        path:"about",
-        element:<About/>
-      },
+    
       {
         path:"contact",
         element:<Contact/>
       },
-      {
-        path:"work",
-        element:<Work/>
-      },
+    
       {
         path:"service",
         element:<Service/>
       },
-      {
-        path:"blogs",
-        element:<Blogs/>
-      },
+     
       {
         path:"terms",
         element:<Terms/>
+      },{
+        path:"privacy",
+        element: <Privacy/>
       }
     ]
   }
