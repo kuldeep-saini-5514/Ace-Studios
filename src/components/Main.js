@@ -231,7 +231,7 @@ const Main = () => {
         >
           <div>
             <img
-              className="rounded-xl sm:w-[50%] sm:ml-40 sm:mt-10 ms:h-[25rem] sm:ml-0 ms:ml-10"
+              className="rounded-xl h-[50rem] lg:w-1/2 sm:w-1/2 sm:ml-40 sm:mt-10 ms:h-[25rem] sm:ml-0 ms:ml-10"
               src={require(`./Images/laptop-1.jpeg`)}
               alt=""
             />

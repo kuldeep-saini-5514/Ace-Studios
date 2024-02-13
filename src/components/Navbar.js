@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="navbar flex justify-between sm:px-16 sm:py-5 ms:px-5 ms:py-2  shadow-lg sm:w-[100%] " id="navbar-container">
       {/* Logo */}
       <div className="text-purple" id="nav-left">
-        <h5 className="text-purple">FINICK</h5>
+        <Link to={"/"}><h5 className="text-purple">FINICK</h5></Link>
       </div>
       {/* contatct-btn */}
       <div className="flex justify-between gap-x-10 " id="nav-right">

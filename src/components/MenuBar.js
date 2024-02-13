@@ -1,14 +1,19 @@
 import React, { useEffect, useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const MenuBar = ({setHandlebtn}) => {
-
+  const navigate=useNavigate();
   function refreshPage(){
+    navigate("/")
     window.location.reload();
+  }
+  function cool(){
+    setHandlebtn(false)
+  
   }
 
   window.addEventListener("scroll",()=>{
-    if(window.scrollY>70){
+    if(window.scrollY>50){
       setHandlebtn(false)
     }
   })
@@ -26,23 +31,23 @@ const MenuBar = ({setHandlebtn}) => {
                       {/* Nagivate */}
         <div className='flex flex-col gap-y-4 mb-8'>
             <Link to={"/"}>
-            <h1 className='text-black text-xl' onClick={setHandlebtn(true)} >Home</h1>
+            <h1 className='text-black text-xl' onClick={refreshPage} >Home</h1>
             </Link>
            
             <Link to={"/service"}>
-            <h1 className='text-black text-xl'>Service</h1>
+            <h1 className='text-black text-xl' onClick={cool}>Service</h1>
             </Link>
            
             <Link to={"/contact"}>
-            <h1 className='text-black text-xl'>Contact us</h1>
+            <h1 className='text-black text-xl'  onClick={cool}>Contact us</h1>
             </Link>
            
             <Link to={"/terms"}>
-            <h1 className='text-black text-xl'>Terms & Conditions</h1>
+            <h1 className='text-black text-xl'  onClick={cool}>Terms & Conditions</h1>
             </Link>
 
             <Link to={"/privacy"}>
-            <h1 className='text-black text-xl'>Privacy</h1>
+            <h1 className='text-black text-xl' onClick={cool}>Privacy</h1>
             </Link>
 
 

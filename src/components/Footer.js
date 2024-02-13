@@ -46,9 +46,7 @@ const Footer = () => {
             {" "}
             2024 &copy; Copyright <strong>FINICK</strong>. All rights reserved.
           </p>
-          
-        </div>
-        <Link to={"/terms"}>
+          <Link to={"/terms"}>
             <h1 className="text-gray lg:text-base ms:text-sm" onClick={refreshPage}>
               Terms & Conditions
             </h1>
@@ -57,6 +55,8 @@ const Footer = () => {
             <h1 className="text-gray lg:text-base ms:text-sm" onClick={refreshPage}>Privacy</h1>
           </Link>
 
+        </div>
+       
       </div>
     </div>
   );
