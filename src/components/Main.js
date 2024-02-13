@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const [color, setColor] = useState("#ffe710");
+  const navigate=useNavigate();
+
+
   return (
     <>
       <div
@@ -32,7 +36,7 @@ const Main = () => {
           </p>
           {/* buttons container */}
           <div className="flex items-center mt-4 gap-x-10 ">
-            <button className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white">
+            <button className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white" onClick={()=>navigate("contact")}>
               Connect with us
             </button>
           </div>

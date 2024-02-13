@@ -52,11 +52,11 @@ const MenuBar = ({setHandlebtn}) => {
         <div>
             <p>Follow us on</p>
             <div className='flex gap-x-4 text-2xl mt-4'>
-            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-instagram text-base"></i></div>
-            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-facebook-f text-base"></i></div>
-            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-linkedin-in text-base"></i></div>
-            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-twitter text-base"></i></div>
-            <div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-youtube text-base"></i></div> 
+            <a href='https://www.instagram.com/finick.xyz/'><div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-instagram text-base"></i></div></a>
+            
+            <a href='https://www.linkedin.com/company/finick/'><div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-linkedin-in text-base"></i></div></a>
+            <a href='https://twitter.com/Finick_xyz'><div className='text-purple bg-lightgray  h-10 w-12 text-center rounded-xl'><i class="fa-brands fa-twitter text-base"></i></div></a>
+            
             </div>
         </div>
       </div>
