@@ -3,14 +3,21 @@
 @tailwind utilities;
 
 
-/* menu bar container slider CSS */
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 
-/* MenuBar.css */
-
-/* Add this to your styles.css or App.css */
+html{
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 body{
   overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden  ;
 }
 .menu-bar {
     position:absolute;
@@ -95,3 +102,16 @@ body{
   .msg-input:focus{
     border-bottom: 1px solid #6854fc;
   }
+
+
+          /* Navbar */
+  
+  .navbar{
+    width: 100%;
+  }
+
+  /* Nav-bar Contact Button */
+  .nav-btn{
+    display: none;
+  }
+
