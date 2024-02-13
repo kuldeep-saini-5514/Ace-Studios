@@ -9,36 +9,36 @@ const Main = () => {
         style={{
           backgroundImage: `url(${require("./Images/bg_logo.png")})`,
           backgroundSize: "contain",
-          backgroundRepeat:"no-repeat",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* left container */}
-        <div className="w-[45rem] flex flex-col gap-y-4 ">
-          <div className="flex items-center rounded-xl md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 bg-lightgray">
+        <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0   ">
+          <div className="flex items-center rounded-xl md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 ms:w-[100%] ms:py-4 justify-between ms:px-3   bg-lightgray">
             <i
-              className="fa-solid fa-circle fa-2xl md:text-2xl sm:text-2xl"
+              className="fa-solid fa-circle fa-2xl md:text-2xl sm:text-2xl ms:text-xl"
               style={{ color: `${color}` }}
             ></i>
-            <p className="md:ml-4 md:pt-5 text-black md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ">
+            <p className="md:ml-4 md:pt-5 text-black md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ms:mb-0 ms:ml-2 ms:text-base">
               #1 Digital company in the town!
             </p>
           </div>
-          <h1 className="text-black md:text-4xl font-bold sm:text-2xl md:w-[18rem] sm:w-[12rem]">
+          <h1 className="text-black md:text-4xl font-bold sm:text-2xl md:w-[18rem] sm:w-[12rem] ms:text-xl ">
             Tech Solutions Tailored for Growth
           </h1>
-          <p className="text-gray w-[95%] lg:text-base md:text-sm sm:text-xs sm:m-0 ">
+          <p className="text-gray w-[95%] lg:text-base md:text-sm ms:text-xs sm:m-0  ms:mb-0">
             Simplify your digital journey, maximize your return on innovation.
             Let's grow your business together.
           </p>
           {/* buttons container */}
-          <div className="flex items-center mt-4 gap-x-10">
-            <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
+          <div className="flex items-center mt-4 gap-x-10 ">
+            <button className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white">
               Connect with us
             </button>
           </div>
         </div>
         {/* right container */}
-        <div className="md:w-[400px] sm:w-[550px] border-black]">
+        <div className="md:w-[400px] sm:w-[550px] border-black] sm:block ms:hidden">
           <img src={require(`./Images/logo_1.png`)} alt="" />
         </div>
       </div>
@@ -50,12 +50,13 @@ const Main = () => {
       md:mx-8 
       lg:mx-11
       sm:gap-2 
+      ms:mx-2
       "
       >
-        <h1 className="lg:text-4xl md:text-2xl sm:text-2xl font-medium">
+        <h1 className="lg:text-4xl md:text-2xl sm:text-2xl ms:text-xl sm:font-medium ms:font-bold">
           Services That Lead The Way To Better Business
         </h1>
-        <p className="md:w-[80%] sm:w-[90%] lg:text-base md:text-sm sm:text-xs text-gray">
+        <p className="md:w-[80%] sm:w-[90%] lg:text-base md:text-sm ms:text-xs  text-gray ms:mt-5">
           Welcome to Finick, where we pave the path to digital success with our
           comprehensive suite of innovative IT services. As your strategic
           partner in the digital realm, we specialize in:
@@ -74,13 +75,14 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
+          ms:w-[95%] ms:m-0 gap-0 
           "
           >
-            <i class="fa-solid fa-gears text-2xl text-purple"></i>
-            <p className="lg:text-2xl md:text-lg  font-semibold">
+            <i class="fa-solid fa-gears text-4xl  text-purple"></i>
+            <p className="lg:text-2xl ms:text-xl  font-semibold ms:mb-0">
               Mobile App Development
             </p>
-            <p className=" text-black md:text-sm lg:text-base md:text-xs">
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0 ">
               Unleash the Power of Mobile with Custom App Development
             </p>
           </div>
@@ -90,13 +92,14 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
+          ms:w-[95%] ms:m-0
           "
           >
             <i class="fa-solid fa-code text-2xl text-purple"></i>
-            <p className="lg:text-2xl md:text-lg font-semibold">
+            <p className="lg:text-2xl ms:text-2xl font-semibold ms:mb-0">
               Website Development
             </p>
-            <p className=" text-black md:text-sm lg:text-base md:text-xs">
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
               Craft Powerful Digital Experiences with Cutting-Edge Web
               Development
             </p>
@@ -107,11 +110,12 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
+          ms:w-[95%] ms:m-0
           "
           >
             <i class="fa-solid fa-palette text-2xl text-purple"></i>
-            <p className="lg:text-2xl md:text-lg font-semibold">Design</p>
-            <p className=" text-black md:text-sm lg:text-base md:text-xs">
+            <p className="lg:text-2xl ms:text-2xl font-semibold ms:mb-0">Design</p>
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
               Elevate Your Brand with Strategic Web & App Design Solutions
             </p>
           </div>
@@ -121,11 +125,12 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
+          ms:w-[95%] ms:m-0
           "
           >
             <i class="fa-solid fa-lock text-2xl text-purple"></i>
-            <p className="lg:text-2xl md:text-lg font-semibold">AR Solution</p>
-            <p className=" text-black md:text-sm lg:text-base md:text-xs">
+            <p className="lg:text-2xl ms:text-2xl font-semibold ms:mb-0">AR Solution</p>
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
               Reimagine Your Business with Immersive Augmented Reality Solutions
             </p>
           </div>
@@ -134,12 +139,13 @@ const Main = () => {
       {/* Services End */}
 
       {/* Work Start */}
-      <div className="flex justify-center items-center text-center mt-14">
-        <div>
+      <div className="flex justify-center items-center text-center mt-14 ">
+        <div className="ms:p-2">
           <p
             className="font-semibold lg:text-4xl
           md:text-2xl
-          sm:text-2xl sm:mb-2
+          ms:text-2xl sm:mb-2
+
           "
           >
             Companies We Work With
@@ -147,7 +153,7 @@ const Main = () => {
           <p
             className="text-gray  mt-4
           md:text-sm lg:text-base 
-          sm:text-xs
+          ms:text-xs
           "
           >
             We partner with awesome companies like yours, building cool stuff
@@ -157,54 +163,56 @@ const Main = () => {
       </div>
       {/* Logo Container */}
       <div
-        className="flex flex-wrap md:gap-8 md:m-12 mt-16 justify-center items-center
+        className="flex flex-wrap md:gap-8 md:m-12 sm:mt-16 ms:mt-5 justify-center items-center
       md:my-2
       lg:my-12
       sm:my-0 sm:gap-x-3 sm:m-5
+      ms:gap-x-10 ms:gap-y-5
+
       "
       >
         <img
-          className="lg:h-16 md:h-10 sm:h-14 "
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/ig-1.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/2.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/3.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/4.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/5.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/6.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/7.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/8.png`)}
           alt=""
         />
         <img
-          className="lg:h-16 md:h-10 sm:h-14"
+          className="lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/9.png`)}
           alt=""
         />
@@ -213,8 +221,8 @@ const Main = () => {
       <div>
         {/* Left container */}
         <div
-          className="flex md:flex-row sm:flex-col m-2 lg:p-5
-        md:p-2 md:mt-5
+          className="flex md:flex-row ms:flex-col m-2 lg:p-5
+        md:p-2 ms:mt-5
         "
         >
           <div>
@@ -229,15 +237,17 @@ const Main = () => {
             className="lg:mx-12 text-black
           md:mx-5 mt-0
           sm:mx-5 sm:mt-10
+          ms:mx-2
+          
           "
           >
             <h1
-              className="lg:text-4xl md:text-2xl sm:text-4xl text-black font-semibold
+              className="lg:text-4xl md:text-2xl ms:text-3xl ms:mt-5 text-black font-semibold 
             "
             >
               Our Process{" "}
             </h1>
-            <p className="text-gray lg:text-base lg:mt-2 md:text-sm sm:text-xs md:m-0 md:mt-2">
+            <p className="text-gray lg:text-base lg:mt-2 md:text-sm ms:text-xs md:m-0 ms:mt-2 ">
               {" "}
               Your vision, our expertise. From websites to AR, we craft tailored
               solutions through a collaborative process, unlocking success for
@@ -246,14 +256,14 @@ const Main = () => {
             <div className="flex flex-col lg:gap-5 lg:mt-10 md:mt-5 md:gap-2">
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-skin h-10 w-10 rounded-xl">
+                  <div className="flex justify-center items-center bg-skin sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-xl text-brown"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl font-semibold md:m-0">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
                     Discovery
                   </p>
                 </div>
-                <p className="pl-14 pt-2 text-gray lg:text-base md:text-sm sm:text-sm md:m-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Dive deep into your vision: We actively listen and understand
                   your unique goals, challenges, and audience. Strategic
@@ -263,14 +273,14 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightblue h-10 w-10 rounded-xl">
+                  <div className="flex justify-center items-center bg-lightblue sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-lightbulb text-xl text-DarkBlue"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl  font-semibold md:m-0">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
                     Plan
                   </p>
                 </div>
-                <p className="pl-14 pt-2 text-gray lg:text-base md:text-sm sm:text-sm md:m-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   We craft a clear roadmap together, leveraging expertise to
                   guide your project. Flexibility is key; we adapt to your
@@ -279,14 +289,14 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightgreen h-10 w-10 rounded-xl">
+                  <div className="flex justify-center items-center bg-lightgreen sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-xl text-green"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl  font-semibold md:m-0">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
                     Execute
                   </p>
                 </div>
-                <p className="pl-14 pt-2 text-gray lg:text-base md:text-sm sm:text-sm md:m-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Seamless teamwork ensures efficient delivery with rigorous
                   quality control. Regular feedback keeps you informed and
@@ -295,14 +305,14 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightyellow h-10 w-10 rounded-xl">
+                  <div className="flex justify-center items-center bg-lightyellow sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-lg text-DarkYellow"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl  font-semibold md:m-0">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
                     Deliver
                   </p>
                 </div>
-                <p className="pl-14 pt-2 text-gray lg:text-base md:text-sm sm:text-sm md:m-0 ">
+                <p className="ms:pl-14 ms:pt-2 text-gray lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Exceeding expectations, we deliver a product that aligns
                   perfectly with your goals. Beyond launch, ongoing support
@@ -316,15 +326,15 @@ const Main = () => {
       </div>
 
       {/* //Center box  */}
-      <div className="flex bg-LightGray p-10 m-5 mt-12 mb-12">
+      <div className="flex sm:flex-row ms:flex-col bg-LightGray sm:p-10 sm:m-5 mt-12 mb-12 ms:p-5 ms:gap-10">
         {/* left box */}
-        <div className="w-[90rem] h-[10rem]  lg:text-3xl md:text-2xl font-semibold">
+        <div className="sm:w-[90rem] sm:h-[10rem]  lg:text-3xl ms:text-2xl font-semibold">
           We’re a lean creative agency that uses design and code to solve
           problems.
         </div>
         {/* right box */}
         <div>
-          <p className="pl-10 ml-4 h-[10rem] lg:text-lg md:text-sm border-l-[3px] border-Gray  text-gray ">
+          <p className="sm:pl-10 sm:ml-4 sm:h-[10rem] lg:text-lg ms:text-sm sm:border-l-[3px] sm:border-Gray  text-gray ">
             We don't just build solutions, we tailor them to your unique needs.
             From data-driven insights to agile collaboration, we work closely
             with you to deliver cutting-edge solutions that drive real results.

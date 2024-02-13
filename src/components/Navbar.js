@@ -9,7 +9,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar flex justify-between px-16 py-5 shadow-lg sm:w-[100%] " id="navbar-container">
+    <div className="navbar flex justify-between sm:px-16 sm:py-5 ms:px-5 ms:py-2  shadow-lg sm:w-[100%] " id="navbar-container">
       {/* Logo */}
       <div className="text-purple" id="nav-left">
         <h5 className="text-purple">FINICK</h5>
