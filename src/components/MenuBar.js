@@ -2,9 +2,20 @@ import React, { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const MenuBar = ({setHandlebtn}) => {
+
+  function refreshPage(){
+    window.location.reload();
+  }
+
+  window.addEventListener("scroll",()=>{
+    if(window.scrollY>70){
+      setHandlebtn(false)
+    }
+  })
+
   return (
     <div className={`menu-bar ${setHandlebtn ? 'slide-in' : ''}`}>
-    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] rounded-xl h-[100vh]'>
+    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] rounded-xl h-[100vh] ms:h-full'>
                       {/* Go back */}
         <div className='flex items-center gap-x-10 gap-y-2 mb-8'>
         <Link to={"contact"}>
@@ -15,7 +26,7 @@ const MenuBar = ({setHandlebtn}) => {
                       {/* Nagivate */}
         <div className='flex flex-col gap-y-4 mb-8'>
             <Link to={"/"}>
-            <h1 className='text-black text-xl'>Home</h1>
+            <h1 className='text-black text-xl' onClick={setHandlebtn(true)} >Home</h1>
             </Link>
            
             <Link to={"/service"}>

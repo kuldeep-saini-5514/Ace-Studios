@@ -5,75 +5,107 @@ const Service = () => {
     <>
       <div className="ml-34">
         <div className="m-5 p-3">
-          <p className="text-center p-0 m-0 text-2xl font-semibold">
+          <p className="text-center p-0 m-0 lg:text-4xl  ms:text-2xl font-semibold">
             Services We Provided
           </p>
-          <p className="text-center p-0 m-0 text-gray">
+          <p className="text-center p-0 m-0 lg:text-base ms:text-xs lg:mt-5 ms:mt-2 text-gray">
             {" "}
-            Enim egestas at massa senectus justo ut. Hac est.
+            Empowering businesses with innovative web, app, and AR solutions,
+            driving success through creativity, collaboration, and cutting-edge
+            technology.
           </p>
         </div>
 
         {/* Boxes */}
-        <div className="flex flex-wrap justify-evenly align-middle m-4 gap-4">
-          <div className=" h-1/3 w-[30rem] m-3 px-10 py-5 shadow-lg rounded-3xl hover:border-blue">
-          <div className="rounded-full bg-lightgray mb-2  h-10 w-10 flex justify-center items-center"><i class="fa-solid fa-globe text-xl text-purple"></i></div>
-            <h3 className="text-lg font-bold mb-3"> Mobile Development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis impedit aliquam, corrupti alias earum ullam quae commodi laudantium minus dignissimos maiores ratione in magni possimus quia nostrum numquam eaque eligendi!
+        <div
+          className="flex flex-wrap justify-evenly md:gap-y-15 mt-10  items-center text-black
+        md:justify-evenly md:flex-row   
+        lg:justify-evenly 
+        sm:flex-col gap-y-6
+        "
+        >
+          <div
+            className="flex flex-col  md:h-[12rem] w-[35%] shadow-lg rounded-xl sm:p-10 m-6
+          md:w-[45%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] lg:gap-4
+          xl:w-[35%] xl:h-[15rem] 
+          sm:w-[80%] sm:h-[15rem]
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          "
+          >
+            <i class="fa-solid fa-gears text-4xl  text-purple"></i>
+            <p className="lg:text-2xl mm:text-lg ms:text-base font-semibold ms:mb-0">
+              Mobile App Development
             </p>
-            <div className="flex mt-4">
-              <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
-                Connect with us
-              </button>
-            </div>
+            <p className=" text-black ms:text-sm lg:text-base  ms:text-xs ms:mb-0  ">
+              Innovative mobile applications designed to enhance user experience
+              and engagement.
+            </p>
           </div>
-          <div className=" h-1/3 w-[30rem] m-3 px-10 py-5 shadow-lg rounded-3xl hover:border-blue">
-            <div className="rounded-full bg-lightgray mb-2 h-10 w-10 flex justify-center items-center"><i class="fa-solid fa-globe text-xl text-purple"></i></div>
-            <h3 className="text-lg font-bold mb-3">Website Design</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, inventore nostrum odit recusandae dolor animi totam iste? Mollitia dolores non aliquam nostrum iure rerum laudantium dicta, qui, accusamus, quis porro!
+          <div
+            className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
+            md:w-[45%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] lg:gap-4
+          xl:w-[35%] xl:h-[15rem]
+          sm:w-[80%] sm:h-[15rem]
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          "
+          >
+            <i class="fa-solid fa-code text-2xl text-purple"></i>
+            <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
+              Website Development
             </p>
-            <div className="flex mt-4">
-              <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
-                Connect with us
-              </button>
-            </div>
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+              Engaging websites tailored for maximum impact and user
+              interaction.
+            </p>
           </div>
-          <div className=" h-1/3 w-[30rem] m-3 px-10 py-5 shadow-lg rounded-3xl hover:border-blue">
-          <div className="rounded-full bg-lightgray mb-2 h-10 w-10 flex justify-center items-center"><i class="fa-solid fa-globe text-xl text-purple"></i></div>
-            <h3 className="text-lg font-bold mb-3">Graphic Designing</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam amet magni in eaque alias dicta, aspernatur quae suscipit? Obcaecati rem, eligendi ratione blanditiis veritatis adipisci sit nemo laborum vero maxime.
+          <div
+            className="flex flex-col gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
+            md:w-[45%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] lg:gap-4
+          xl:w-[35%] xl:h-[15rem]
+          sm:w-[80%] sm:h-[15rem]
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          "
+          >
+            <i class="fa-solid fa-palette text-2xl text-purple"></i>
+            <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
+              Graphic Design
             </p>
-            <div className="flex mt-4">
-              <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
-                Connect with us
-              </button>
-            </div>
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+              Creative designs that set your brand apart and leave a lasting
+              impression.
+            </p>
           </div>
-          <div className=" h-1/3 w-[30rem] m-3 px-10 py-5 shadow-lg rounded-3xl hover:border-blue">
-          <div className="rounded-full bg-lightgray mb-2 h-10 w-10 flex justify-center items-center"><i class="fa-solid fa-globe text-xl text-purple"></i></div>
-            <h3 className="text-lg font-bold mb-3">Digital marketing</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ab cupiditate rerum! Debitis aliquam molestias, modi exercitationem consequuntur distinctio quaerat sapiente quia atque, aut non itaque laborum numquam dolorem eligendi!
+          <div
+            className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
+          md:w-[45%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] lg:gap-4
+          xl:w-[35%] xl:h-[15rem]
+          sm:w-[80%] sm:h-[15rem]
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5 
+          "
+          >
+            <i class="fa-solid fa-lock text-2xl  text-purple"></i>
+            <p className="lg:text-2xl ms:text-xl font-semibold ms:mb-0">
+              Digital Marketing
             </p>
-            <div className="flex mt-4">
-              <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
-                Connect with us
-              </button>
-            </div>
+            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+              Targeted strategies to boost online visibility and drive business
+              growth.
+            </p>
           </div>
         </div>
 
         {/* small content  */}
-        <div className="flex flex-wrap  px-24 py-10 bg-lightgray mt-20">
+        <div className="flex flex-wrap  sm:flex-row ms:flex-col-reverse xl:px-24 ms:px-5 ms:py-5 bg-lightgray mt-20">
           <div className="inline-block w-2/4">
-            <h3 className="text-3xl mb-2 w-[25rem] font-bold">
+            <h3 className="sm:text-3xl mb-2 lg:w-[25rem]  md:w-[20rem] ms:w-[25rem] ms:text-xl sm:mt-0 ms:mt-5 font-bold">
               {" "}
               Bringing Your Online Dreams to Life, Together!
             </h3>
-            <p className="mb-4 w-[28rem] text-gray">
+            <p className="mb-4 lg:w-[28rem] lg:text-xl ms:text-xs ms:w-[20rem]  text-gray">
               {" "}
               Go hand in hand with Swift Site Design and transform your online
               visions beautifully into reality. We weave your unique ideas into
@@ -81,12 +113,13 @@ const Service = () => {
               amazingly user-friendly. Whether you lean towards WordPress,
               Shopify, Wix or a one-of-a-kind custom website.
             </p>
-            <button className="text-base bg-purple rounded-3xl px-4 py-2 text-white">
-              Connect with us
-            </button>{" "}
           </div>
-          <div className="w-2/4">
-          <img className="rounded-xl" src={require(`./Images/standup.jpeg`)} alt="" />
+          <div className="sm:w-2/4 ms:w-[98%] ">
+            <img
+              className="rounded-xl"
+              src={require(`./Images/standup.jpeg`)}
+              alt=""
+            />
           </div>
         </div>
       </div>

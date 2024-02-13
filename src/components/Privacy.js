@@ -3,7 +3,7 @@ import './terms.css';
 const Privacy = () => {
   return (
     <div>
-        <div class="m-5 mx-16 term-contianer">
+        <div class="m-4 mx-10 term-contianer">
             <h4>Privacy Policy</h4>
 <p className='text-black'>Welcome to Finick! This Privacy Policy outlines how we collect, use, and safeguard the information you provide when accessing or using our website (www.finick.com) and our services. Your privacy is important to us, and we are committed to protecting your personal information. By accessing our website or using our services, you consent to the practices described in this Privacy Policy.</p>
 

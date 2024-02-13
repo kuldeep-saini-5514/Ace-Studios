@@ -75,7 +75,7 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[95%] ms:m-0 gap-0 
+          ms:w-[95%] ms:m-0 gap-0 ms:h-[13rem]
           "
           >
             <i class="fa-solid fa-gears text-4xl  text-purple"></i>
@@ -92,7 +92,7 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[95%] ms:m-0
+          ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
             <i class="fa-solid fa-code text-2xl text-purple"></i>
@@ -110,7 +110,7 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[95%] ms:m-0
+          ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
             <i class="fa-solid fa-palette text-2xl text-purple"></i>
@@ -125,7 +125,7 @@ const Main = () => {
           lg:w-[45%] lg:h-[15rem] gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[95%] ms:m-0
+          ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
             <i class="fa-solid fa-lock text-2xl text-purple"></i>
@@ -227,7 +227,7 @@ const Main = () => {
         >
           <div>
             <img
-              className="rounded-xl sm:w-[50%] sm:ml-40 sm:mt-10"
+              className="rounded-xl sm:w-[50%] sm:ml-40 sm:mt-10 ms:h-[25rem] sm:ml-0 ms:ml-10"
               src={require(`./Images/laptop-1.jpeg`)}
               alt=""
             />
@@ -326,7 +326,7 @@ const Main = () => {
       </div>
 
       {/* //Center box  */}
-      <div className="flex sm:flex-row ms:flex-col bg-LightGray sm:p-10 sm:m-5 mt-12 mb-12 ms:p-5 ms:gap-10">
+      <div className="flex sm:flex-row ms:flex-col bg-LightGray sm:p-10 sm:m-5 mt-12 mb-12 ms:p-5 ms:gap-10 ms:mb-5">
         {/* left box */}
         <div className="sm:w-[90rem] sm:h-[10rem]  lg:text-3xl ms:text-2xl font-semibold">
           We’re a lean creative agency that uses design and code to solve
@@ -345,12 +345,13 @@ const Main = () => {
       </div>
 
       {/* another box */}
-      <div className="flex m-2">
+      <div className="flex sm:flex-row ms:flex-col m-2">
         {/* left- image box */}
         <div>
           <img
             className="lg:h-[30rem] lg:w-[55rem] rounded-xl  m-2
             md:h-[25rem] md:w-[25rem]
+            ms:h-[15rem] ms:w-[95%]
             "
             src={require(`./Images/Group.jpeg`)}
             alt=""
@@ -360,12 +361,13 @@ const Main = () => {
         <div
           className="lg:m-0 flex flex-col  lg:pl-8  justify-center gap-5 
         md:pl-5 md:m-0 
+        ms:pl-3 ms:pt-5
         "
         >
-          <p className="lg:text-4xl md:text-2xl m-0 w-[20rem] font-semibold">
+          <p className="lg:text-4xl ms:text-2xl m-0 w-[20rem] font-semibold">
             Designed and built by an astonishing creative team.
           </p>
-          <p className="text-gray m-0 lg:text-base md:text-sm lg:w-[28rem] md:w-[20rem] md:text-xs">
+          <p className="text-gray m-0 lg:text-base md:text-sm lg:w-[28rem] md:w-[20rem] ms:text-xs">
             Empowering businesses with innovative solutions and tangible
             results, our expert team is dedicated to helping you reach your
             objectives with confidence.
@@ -374,11 +376,11 @@ const Main = () => {
       </div>
 
       {/* TESTIMONIALS */}
-      <div className="flex mt-20 justify-center lg:items-center">
+      <div className="flex sm:flex-row ms:flex-col  sm:mt-20 ms:p-3 justify-center lg:items-center">
         {/* left */}
         <div className="lg:h-[30rem] w-[160rem] m-5 md:h-[24rem]">
           <div
-            className="absolute lg:left-[10rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-[10rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-5 md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -387,7 +389,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[20rem] lg:top-[219rem] lg:w-[6rem] lg:h-[6rem] rounded-xl
+            className="absolute lg:left-[20rem] lg:top-[219rem] lg:w-[6rem] lg:h-[6rem] rounded-xl sm:block ms:hidden
             md:left-[8rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -396,7 +398,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:top-[220rem] lg:left-5 lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:top-[220rem] lg:left-5 lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-[15rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -405,7 +407,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[6rem] lg:top-[229rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-[6rem] lg:top-[229rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-5 md:top-[201rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -414,7 +416,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[16rem] lg:top-[227rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-[16rem] lg:top-[227rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-[8rem] top-[201rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -423,7 +425,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[26rem] lg:top-[225rem] lg:w-[6rem] lg:h-[6rem] rounded-xl
+            className="absolute lg:left-[26rem] lg:top-[225rem] lg:w-[6rem] lg:h-[6rem] rounded-xl sm:block ms:hidden
             md:left-[15rem] top-[201rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -432,7 +434,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-5 lg:top-[237rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-5 lg:top-[237rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-5 top-[208rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -441,7 +443,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[14rem] lg:top-[237rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-[14rem] lg:top-[237rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-[8rem] top-[208rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -450,7 +452,7 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="absolute lg:left-[24rem] lg:top-[235rem] lg:w-[7rem] lg:h-[7rem] rounded-xl
+            className="absolute lg:left-[24rem] lg:top-[235rem] lg:w-[7rem] lg:h-[7rem] rounded-xl sm:block ms:hidden
             md:left-[15rem] top-[208rem] md:w-[6rem] md:h-[6rem]
             "
             style={{
@@ -461,10 +463,10 @@ const Main = () => {
         </div>
         {/* right */}
         <div>
-          <p className="font-semibold lg:text-4xl leading-10 w-[25rem] md:text-2xl md:mt-10">
+          <p className="font-semibold lg:text-4xl leading-10 sm:w-[25rem]  ms:text-2xl md:mt-10">
             Meet Client Satisfaction After Working With Us
           </p>
-          <p className="font-semibold lg:text-base m-0 p-0 md:text-sm">
+          <p className="font-semibold lg:text-base m-0 p-0 ms:text-sm">
             Doesn't feel like an agency
           </p>
           {/* icons */}
@@ -476,7 +478,7 @@ const Main = () => {
             <i class="fa-solid fa-star"></i>
           </div>
           {/* icons */}
-          <p className="text-gray lg:text-base md:text-xs">
+          <p className="text-gray lg:text-base ms:text-xs">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             doloribus voluptatibus minus tempore corporis, sapiente culpa quos
             temporibus expedita sequi omnis commodi! Eligendi, beatae animi ut
@@ -487,18 +489,18 @@ const Main = () => {
           <div className="flex">
             {/* left */}
             <div
-              className="w-[4rem] h-[4rem] rounded-xl"
+              className="sm:w-[4rem] sm:h-[4rem] ms:w-[7rem] ms:h-[7rem] rounded-xl"
               style={{
                 backgroundImage: `url(${require("./Images/TS-logo.png")})`,
                 backgroundSize: "100% 110%",
               }}
             ></div>
             {/* right */}
-            <div className="flex flex-col ml-5">
-              <p className="p-0 font-semibold m-0 lg:text-base md:text-sm">
+            <div className="flex flex-col sm:ml-5 ms:ml-10 justify-center">
+              <p className="p-0 font-semibold m-0 lg:text-base md:text-sm ms:text-xl">
                 Gwen Stacy
               </p>
-              <p className="p-0 m-0 text-gray mt-2 lg:text-base md:text-sm">
+              <p className="p-0 m-0 text-gray mt-2 lg:text-base md:text-sm ms:text-xl">
                 Cloudexter
               </p>
             </div>
@@ -507,16 +509,16 @@ const Main = () => {
       </div>
       {/* //Contact  */}
       <div>
-        <div className="flex-col lg:mt-14 text-center">
-          <h3 className="lg:text-4xl md:text-2xl">Contact us</h3>
-          <p className="text-gray lg:text-base md:text-sm">
+        <div className="flex-col ms:mt-14  text-center">
+          <h3 className="lg:text-4xl ms:text-2xl">Contact us</h3>
+          <p className="text-gray lg:text-base ms:text-sm">
             Felis nunc, aliquet quam dictum senectus nunc.
           </p>
         </div>
 
-        <div className="flex m-10 text-white bg-white shadow-2xl rounded-3xl">
+        <div className="flex sm:flex-row ms:flex-col-reverse sm:m-10 text-white bg-white shadow-2xl rounded-3xl">
           {/* //left side */}
-          <div className="bg-purple text-white rounded-xl px-8 py-6  lg:w-[25rem] h-[40rem] md:w-[40rem]">
+          <div className="bg-purple text-white rounded-xl sm:px-8 py-6  lg:w-[25rem] sm:h-[40rem] md:w-[40rem] ms:m-3 ms:px-4 ms:mt-10">
             <div>
               <p className="text-2xl font-semibold mb-2">
                 {" "}
@@ -546,36 +548,36 @@ const Main = () => {
           </div>
           {/* right side */}
           <div className=" text-black">
-            <form class="flex flex-wrap lg:flex-row md:flex-col ml-10 lg:w-[40rem] md:w-[19rem]">
+            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[40rem] md:w-[19rem]">
               <div>
-                <p className="text-black lg:text-lg md:text-base   m-0 lg:mb-2 md:mb-0 mt-8">
+                <p className="text-black lg:text-lg sm:text-base    m-0 lg:mb-2 md:mb-0 sm:mt-8">
                   First Name
                 </p>
                 <input className="contact-input" type="text" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 lg:mt-8 md:mt-3 md:mb-0">
+                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 sm:mb-0">
                   Last Name
                 </p>
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 lg:mt-8 md:mt-3 md:mb-0">
+                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Email
                 </p>
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 lg:mt-8 md:mt-3 md:mb-0">
+                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Phone
                 </p>
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p className="lg:mt-10 md:mt-4 md:mb-3 font-semibold lg:text-xl md:text-base ">
+                <p className="lg:mt-10 ms:mt-4 md:mb-3 font-semibold lg:text-xl ms:text-base">
                   What Service do you need?
                 </p>
-                <div className="flex lg:flex-wrap lg:gap-x-20 lg:gap-y-5 lg:flex-row md:flex-col md:gap-y-2 ">
+                <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 ">
                   <div className="">
                     <label class="container">
                       Web Design
@@ -612,12 +614,12 @@ const Main = () => {
                     </label>
                   </div>
                 </div>
-                <p className="lg:mt-10 lg:text-xl md:text-lg md:mt-4 md:mb-2 font-semibold ">
+                <p className="lg:mt-10 lg:text-xl ms:text-lg ms:mt-4 md:mb-2 font-semibold ">
                   Message
                 </p>
                 <input
                   type="text"
-                  className="msg-input w-[90%] focus:outline-none"
+                  className="msg-input sm:w-[90%] ms:w-[100%] focus:outline-none"
                   placeholder="Write your message..."
                 />
               </div>

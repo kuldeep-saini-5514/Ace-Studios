@@ -3,7 +3,7 @@ import './terms.css';
 const Terms = () => {
   return (
     <div>
-      <div className="m-5 mx-16 term-contianer">
+      <div className="m-4 mx-10 term-contianer">
       
 
       <h4>Conditions of Use</h4>
