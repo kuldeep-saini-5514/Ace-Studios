@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 const MenuBar = ({setHandlebtn}) => {
   return (
     <div className={`menu-bar ${setHandlebtn ? 'slide-in' : ''}`}>
-    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] h-[100vh]'>
+    <div className='px-20 py-5 bg-white shadow-lg w-[27rem] rounded-xl h-[100vh]'>
                       {/* Go back */}
         <div className='flex items-center gap-x-10 gap-y-2 mb-8'>
         <Link to={"contact"}>
