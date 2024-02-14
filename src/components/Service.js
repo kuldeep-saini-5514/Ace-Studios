@@ -30,7 +30,7 @@ const Service = () => {
           lg:w-[45%] lg:h-[15rem] lg:gap-4
           xl:w-[35%] xl:h-[15rem] 
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5
           "
           >
             <i class="fa-solid fa-gears text-4xl  text-purple"></i>
@@ -48,7 +48,7 @@ const Service = () => {
           lg:w-[45%] lg:h-[15rem] lg:gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5
           "
           >
             <i class="fa-solid fa-code text-2xl text-purple"></i>
@@ -66,7 +66,7 @@ const Service = () => {
           lg:w-[45%] lg:h-[15rem] lg:gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5
           "
           >
             <i class="fa-solid fa-palette text-2xl text-purple"></i>
@@ -84,7 +84,7 @@ const Service = () => {
           lg:w-[45%] lg:h-[15rem] lg:gap-4
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] sm:h-[15rem]
-          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-8 ms:py-5 
+          ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5 
           "
           >
             <i class="fa-solid fa-lock text-2xl  text-purple"></i>
