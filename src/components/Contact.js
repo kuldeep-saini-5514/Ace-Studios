@@ -3,22 +3,22 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-    <div className="flex-col ms:mt-14  text-center">
-      <h3 className="lg:text-4xl ms:text-2xl">Contact us</h3>
+    <div className="flex-col sm:mt-2 ms:mt-10  text-center">
+      <h3 className="lg:text-4xl ms:text-3xl">Contact us</h3>
       <p className="text-gray lg:text-base ms:text-sm">
         Felis nunc, aliquet quam dictum senectus nunc.
       </p>
     </div>
 
-    <div className="flex sm:flex-row ms:flex-col-reverse sm:m-10 text-white bg-white shadow-2xl rounded-3xl">
+    <div className="flex sm:flex-row ms:flex-col-reverse sm:m-10 text-white bg-white shadow-2xl md:mt-0 rounded-3xl">
       {/* //left side */}
-      <div className="bg-purple text-white rounded-xl sm:px-8 py-6  lg:w-[25rem] sm:h-[40rem] md:w-[40rem] ms:m-3 ms:px-4 ms:mt-10">
+      <div className="bg-purple text-white rounded-xl sm:px-8 py-6  lg:w-[25rem] sm:h-[40rem] md:w-[40rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10">
         <div>
           <p className="text-2xl font-semibold mb-2">
             {" "}
             Contact Information
           </p>
-          <p className="mb-10 lg:text-base text-Gray">
+          <p className="mb-10 lg:text-xl ms:text-sm text-Gray">
             {" "}
             If you like to work with us then drop us a message
           </p>
@@ -42,34 +42,34 @@ const Contact = () => {
       </div>
       {/* right side */}
       <div className=" text-black">
-        <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[40rem] md:w-[19rem]">
+        <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[25rem] md:w-[19rem]">
           <div>
-            <p className="text-black lg:text-lg sm:text-base    m-0 lg:mb-2 md:mb-0 sm:mt-8">
+            <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
               First Name
             </p>
             <input className="contact-input" type="text" />
           </div>
           <div>
-            <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 sm:mb-0">
+            <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 sm:mb-0">
               Last Name
             </p>
             <input className="contact-input" type="email" />
           </div>
           <div>
-            <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+            <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
               Email
             </p>
             <input className="contact-input" type="email" />
           </div>
           <div>
-            <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+            <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
               Phone
             </p>
             <input className="contact-input" type="email" />
           </div>
-          <div>
+          <div className="w-[100%]">
             <p className="lg:mt-10 ms:mt-4 md:mb-3 font-semibold lg:text-xl ms:text-base">
-              What Service do you need?
+              What Services do you need?
             </p>
             <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 ">
               <div className="">

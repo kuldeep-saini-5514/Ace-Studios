@@ -24,7 +24,7 @@ body{
     position:absolute;
     right: 0rem;
     animation: move 0.5s ease-in-out;
-    transform: translateX(100%);
+    transform: translateX(100%);  
   }
   @keyframes move {
     0%{
@@ -37,13 +37,12 @@ body{
   }
 
   .contact-input{
-    width: 15rem;
     padding-left: 1rem;
-    margin-right: 5rem;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid lightgray;
     color: black;
+    background-color: transparent;
   }
   .contact-input:focus{
     outline: none;
@@ -51,6 +50,22 @@ body{
     border-bottom: 1px solid #6854fc;
 
   } 
+
+  @media (min-width: 320px) {
+    .contact-input{
+      width: 80vw;
+    }
+  }
+
+  @media (min-width: 768px) {
+      .contact-input{
+        margin-right: 0rem;
+        width: 30vw;
+      }
+  }
+
+
+
 
   /* radio button */
 
@@ -98,6 +113,7 @@ body{
   .msg-input{
     border-bottom: 1px solid lightgray;
     padding-bottom: 0.5rem;
+    background-color: transparent;    
   }
 
   .msg-input:focus{

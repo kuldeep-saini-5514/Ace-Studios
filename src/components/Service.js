@@ -8,7 +8,7 @@ const Service = () => {
           <p className="text-center p-0 m-0 lg:text-4xl  ms:text-2xl font-semibold">
             Services We Provided
           </p>
-          <p className="text-center p-0 m-0 lg:text-base ms:text-xs lg:mt-5 ms:mt-2 text-gray">
+          <p className="text-center p-0 m-0 lg:text-base ms:text-sm lg:mt-5 ms:mt-2 text-gray">
             {" "}
             Empowering businesses with innovative web, app, and AR solutions,
             driving success through creativity, collaboration, and cutting-edge
@@ -37,7 +37,7 @@ const Service = () => {
             <p className="lg:text-2xl mm:text-lg ms:text-base font-semibold ms:mb-0">
               Mobile App Development
             </p>
-            <p className=" text-black ms:text-sm lg:text-base  ms:text-xs ms:mb-0  ">
+            <p className=" text-black ms:text-sm lg:text-base  ms:text-sm ms:mb-0  ">
               Innovative mobile applications designed to enhance user experience
               and engagement.
             </p>
@@ -55,7 +55,7 @@ const Service = () => {
             <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
               Website Development
             </p>
-            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+            <p className=" text-black ms:text-sm lg:text-base ms:text-sm ms:mb-0">
               Engaging websites tailored for maximum impact and user
               interaction.
             </p>
@@ -73,7 +73,7 @@ const Service = () => {
             <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
               Graphic Design
             </p>
-            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+            <p className=" text-black ms:text-sm lg:text-base ms:text-sm ms:mb-0">
               Creative designs that set your brand apart and leave a lasting
               impression.
             </p>
@@ -91,7 +91,7 @@ const Service = () => {
             <p className="lg:text-2xl ms:text-xl font-semibold ms:mb-0">
               Digital Marketing
             </p>
-            <p className=" text-black ms:text-sm lg:text-base ms:text-xs ms:mb-0">
+            <p className=" text-black ms:text-sm lg:text-base ms:text-sm ms:mb-0">
               Targeted strategies to boost online visibility and drive business
               growth.
             </p>
@@ -105,7 +105,7 @@ const Service = () => {
               {" "}
               Bringing Your Online Dreams to Life, Together!
             </h3>
-            <p className="mb-4 lg:w-[28rem] lg:text-xl ms:text-xs ms:w-[20rem]  text-gray">
+            <p className="mb-4 lg:w-[28rem] lg:text-xl ms:text-sm ms:w-[20rem]  text-gray">
               {" "}
               Go hand in hand with Swift Site Design and transform your online
               visions beautifully into reality. We weave your unique ideas into

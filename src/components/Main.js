@@ -18,19 +18,19 @@ const Main = () => {
       >
         {/* left container */}
         <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0   ">
-          <div className="flex items-center rounded-xl md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 ms:w-[100%] ms:py-4 justify-between ms:px-3   bg-lightgray">
+          <div className="flex items-center rounded-xl md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
             <i
               className="fa-solid fa-circle fa-2xl md:text-2xl sm:text-2xl ms:text-xl"
               style={{ color: `${color}` }}
             ></i>
-            <p className="md:ml-4 md:pt-5 text-black md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ms:mb-0 ms:ml-2 ms:text-base">
+            <p className="md:ml-4 text-black md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ms:mb-0 ms:ml-2 ms:text-base">
               #1 Digital company in the town!
             </p>
           </div>
-          <h1 className="text-black md:text-4xl font-bold sm:text-2xl md:w-[18rem] sm:w-[12rem] ms:text-xl ">
+          <h1 className="text-black md:text-4xl font-bold sm:text-2xl md:w-[18rem] sm:w-[12rem] mm:text-4xl ms:text-3xl ">
             Tech Solutions Tailored for Growth
           </h1>
-          <p className="text-gray w-[95%] lg:text-base md:text-sm ms:text-xs sm:m-0  ms:mb-0">
+          <p className="text-gray w-[95%] lg:text-base md:text-sm ms:text-sm sm:m-0  ms:mb-0">
             Simplify your digital journey, maximize your return on innovation.
             Let's grow your business together.
           </p>
@@ -57,10 +57,10 @@ const Main = () => {
       ms:mx-2
       "
       >
-        <h1 className="lg:text-4xl md:text-2xl sm:text-2xl ms:text-xl sm:font-medium ms:font-bold">
+        <h1 className="lg:text-4xl md:text-2xl sm:text-2xl ms:text-2xl sm:font-medium ms:font-bold">
           Services That Lead The Way To Better Business
         </h1>
-        <p className="md:w-[80%] sm:w-[90%] lg:text-base md:text-sm ms:text-xs  text-gray ms:mt-5">
+        <p className="md:w-[80%] sm:w-[90%] lg:text-base md:text-sm ms:text-xs md:mt-0 text-gray ms:mt-5">
           Welcome to Finick, where we pave the path to digital success with our
           comprehensive suite of innovative IT services. As your strategic
           partner in the digital realm, we specialize in:
@@ -75,10 +75,10 @@ const Main = () => {
         >
           <div
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
-          md:w-[48%] md:m-0 md:gap-0
-          lg:w-[45%] lg:h-[15rem] gap-4
+          md:w-[48%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
-          sm:w-[80%] sm:h-[15rem]
+          sm:w-[80%] ml:h-[15rem]
           ms:w-[95%] ms:m-0 gap-0 ms:h-[13rem]
           "
           >
@@ -92,10 +92,10 @@ const Main = () => {
           </div>
           <div
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
-            md:w-[48%] md:m-0 md:gap-0
-          lg:w-[45%] lg:h-[15rem] gap-4
+            md:w-[48%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
-          sm:w-[80%] sm:h-[15rem]
+          sm:w-[80%] ml:h-[15rem] 
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
@@ -110,10 +110,10 @@ const Main = () => {
           </div>
           <div
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
-            md:w-[48%] md:m-0 md:gap-0
-          lg:w-[45%] lg:h-[15rem] gap-4
+            md:w-[48%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
-          sm:w-[80%] sm:h-[15rem]
+          sm:w-[80%] ml:h-[15rem]
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
@@ -125,10 +125,10 @@ const Main = () => {
           </div>
           <div
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
-          md:w-[48%] md:m-0 md:gap-0
-          lg:w-[45%] lg:h-[15rem] gap-4
+          md:w-[48%] md:m-0 md:gap-2
+          lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
-          sm:w-[80%] sm:h-[15rem]
+          sm:w-[80%] ml:h-[15rem]
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
@@ -231,7 +231,7 @@ const Main = () => {
         >
           <div>
             <img
-              className="rounded-xl h-[50rem] lg:w-1/2 sm:w-1/2 sm:ml-40 sm:mt-10 ms:h-[25rem] sm:ml-0 ms:ml-10"
+              className="rounded-xl  sm: sm:ml-0 sm:mt-10  sm:ml-0 ms:ml-0"
               src={require(`./Images/laptop-1.jpeg`)}
               alt=""
             />
@@ -263,7 +263,7 @@ const Main = () => {
                   <div className="flex justify-center items-center bg-skin sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-xl text-brown"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
                     Discovery
                   </p>
                 </div>
@@ -280,7 +280,7 @@ const Main = () => {
                   <div className="flex justify-center items-center bg-lightblue sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-lightbulb text-xl text-DarkBlue"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
                     Plan
                   </p>
                 </div>
@@ -296,7 +296,7 @@ const Main = () => {
                   <div className="flex justify-center items-center bg-lightgreen sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-xl text-green"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
                     Execute
                   </p>
                 </div>
@@ -312,7 +312,7 @@ const Main = () => {
                   <div className="flex justify-center items-center bg-lightyellow sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
                     <i class="fa-solid fa-rocket text-lg text-DarkYellow"></i>
                   </div>
-                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ">
+                  <p className="text-black lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
                     Deliver
                   </p>
                 </div>
@@ -355,7 +355,7 @@ const Main = () => {
           <img
             className="lg:h-[30rem] lg:w-[55rem] rounded-xl  m-2
             md:h-[25rem] md:w-[25rem]
-            ms:h-[15rem] ms:w-[95%]
+            ms:h-[22rem] ms:w-[95%]
             "
             src={require(`./Images/Group.jpeg`)}
             alt=""
@@ -513,22 +513,22 @@ const Main = () => {
       </div>
       {/* //Contact  */}
       <div>
-        <div className="flex-col ms:mt-14  text-center">
-          <h3 className="lg:text-4xl ms:text-2xl">Contact us</h3>
+        <div className="flex-col sm:mt-2 ms:mt-10  text-center">
+          <h3 className="lg:text-4xl ms:text-3xl">Contact us</h3>
           <p className="text-gray lg:text-base ms:text-sm">
             Felis nunc, aliquet quam dictum senectus nunc.
           </p>
         </div>
 
-        <div className="flex sm:flex-row ms:flex-col-reverse sm:m-10 text-white bg-white shadow-2xl rounded-3xl">
+        <div className="flex sm:flex-row ms:flex-col-reverse sm:m-10 text-white bg-white shadow-2xl md:mt-0 rounded-3xl">
           {/* //left side */}
-          <div className="bg-purple text-white rounded-xl sm:px-8 py-6  lg:w-[25rem] sm:h-[40rem] md:w-[40rem] ms:m-3 ms:px-4 ms:mt-10">
+          <div className="bg-purple text-white rounded-xl sm:px-8 py-6  lg:w-[25rem] sm:h-[40rem] md:w-[40rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10">
             <div>
               <p className="text-2xl font-semibold mb-2">
                 {" "}
                 Contact Information
               </p>
-              <p className="mb-10 lg:text-base text-Gray">
+              <p className="mb-10 lg:text-xl ms:text-sm text-Gray">
                 {" "}
                 If you like to work with us then drop us a message
               </p>
@@ -552,34 +552,34 @@ const Main = () => {
           </div>
           {/* right side */}
           <div className=" text-black">
-            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[40rem] md:w-[19rem]">
+            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[25rem] md:w-[19rem]">
               <div>
-                <p className="text-black lg:text-lg sm:text-base    m-0 lg:mb-2 md:mb-0 sm:mt-8">
+                <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
                   First Name
                 </p>
                 <input className="contact-input" type="text" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 sm:mb-0">
+                <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 sm:mb-0">
                   Last Name
                 </p>
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+                <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Email
                 </p>
                 <input className="contact-input" type="email" />
               </div>
               <div>
-                <p className="text-black lg:text-lg md:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+                <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Phone
                 </p>
                 <input className="contact-input" type="email" />
               </div>
-              <div>
+              <div className="w-[100%]">
                 <p className="lg:mt-10 ms:mt-4 md:mb-3 font-semibold lg:text-xl ms:text-base">
-                  What Service do you need?
+                  What Services do you need?
                 </p>
                 <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 ">
                   <div className="">
