@@ -5,7 +5,7 @@ const Contact = () => {
     <div>
     <div className="flex-col sm:mt-2 ms:mt-10  text-center">
       <h3 className="lg:text-4xl ms:text-3xl">Contact us</h3>
-      <p className="text-gray lg:text-base ms:text-sm">
+      <p className="text-gray lg:text-base ms:text-sm sm:mt-0 ms:mt-2">
         Felis nunc, aliquet quam dictum senectus nunc.
       </p>
     </div>

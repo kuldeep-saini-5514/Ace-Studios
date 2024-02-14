@@ -89,7 +89,7 @@ p {
 }
 @media (min-width: 375px) {
   p{
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 425px) {}

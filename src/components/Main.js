@@ -407,7 +407,7 @@ const Main = () => {
             ms:hidden
             sm:block 
             md:static md:w-[6rem] md:h-[6rem]
-            lg:absolute lg:w-[6rem] lg:h-[6rem] 
+            lg:absolute lg:w-[6rem] lg:h-[6rem] lg:left-[20rem] lg:top-[214rem] 
             xl:h-[7rem] xl:w-[7rem] xl:left-[25rem] xl:top-[214rem]  "
             style={{
               backgroundImage: `url(${require("./Images/TS-2.png")})`,
