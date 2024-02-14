@@ -53,17 +53,22 @@ body{
 
   @media (min-width: 320px) {
     .contact-input{
-      width: 80vw;
+      width: 60vw;
     }
   }
 
   @media (min-width: 768px) {
       .contact-input{
         margin-right: 0rem;
-        width: 30vw;
+        width: 35vw;
       }
   }
 
+  @media (min-width: 1024px){
+    .contact-input{
+      width: 23vw;
+    }
+  }
 
 
 

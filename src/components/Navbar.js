@@ -9,18 +9,18 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar flex justify-between sm:px-16 sm:py-5 ms:px-5 ms:py-2  shadow-lg sm:w-[100%] " id="navbar-container">
+    <div className="navbar flex justify-between sm:px-16 sm:py-5 ms:px-5 ms:py-2 h-24 items-center shadow-lg sm:w-[100%] " id="navbar-container">
       {/* Logo */}
-      <div className="text-purple" id="nav-left">
-        <Link to={"/"}><h5 className="text-purple">FINICK</h5></Link>
+      <div className="text-purple " id="nav-left">
+        <Link to={"/"}><h5 className="text-purple 1xl:text-3xl">FINICK</h5></Link>
       </div>
       {/* contatct-btn */}
       <div className="flex justify-between gap-x-10 " id="nav-right">
         <Link to={"contact"}>
-        <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 text-white  md:block ">Connect with us</button>
+        <button className="nav-btn text-base bg-purple 1xl:text-xl rounded-3xl px-4 py-2 text-white  md:block ">Connect with us</button>
         </Link>
       {/* menubar - icon */}
-        <button onClick={handlemenuclick}><i class="fa-solid fa-bars-staggered text-2xl"></i></button>
+        <button onClick={handlemenuclick}><i class="fa-solid fa-bars-staggered 1xl:text-3xl text-2xl"></i></button>
       </div>
       {handlebtn && <MenuBar setHandlebtn={setHandlebtn}/>}
     </div>
