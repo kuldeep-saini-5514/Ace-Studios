@@ -618,7 +618,7 @@ const Main = () => {
           </div>
           {/* right side */}
           <div className=" text-black">
-            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-5 ms:ml-5 1xl:w-[55rem] xl:w-[45rem] lg:w-[35rem] lg:gap-10  md:w-[23rem]">
+            <form className="flex flex-wrap lg:flex-row md:flex-col sm:ml-5 ms:ml-5 1xl:w-[55rem] xl:w-[45rem] lg:w-[35rem] lg:gap-10  md:w-[23rem]">
               <div className="">
                 <p className="text-black  1xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
                   First Name
