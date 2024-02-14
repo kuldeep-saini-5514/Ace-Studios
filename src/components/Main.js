@@ -355,11 +355,11 @@ const Main = () => {
       </div>
 
       {/* another box */}
-      <div className="flex sm:flex-row ms:flex-col m-2">
+      <div className="flex sm:flex-row ms:flex-col justify-around m-2">
         {/* left- image box */}
         <div>
           <img
-            className="lg:h-[30rem] lg:w-[55rem] rounded-xl  m-2
+            className="lg:h-[30rem] lg:w-[40rem] rounded-xl  m-2
             md:h-[25rem] md:w-[25rem]
             ms:h-[22rem] ms:w-[95%]
             "
@@ -550,7 +550,7 @@ const Main = () => {
       </div>
       {/* //Contact  */}
       <div>
-        <div className="flex-col sm:mt-2 ms:mt-10  text-center">
+        <div className="flex-col sm:mt-10 ms:mt-10  text-center">
           <h3 className="lg:text-4xl ms:text-3xl">Contact us</h3>
           <p className="text-gray lg:text-base ms:text-sm sm:pt-0 ms:pt-2">
             Felis nunc, aliquet quam dictum senectus nunc.
@@ -589,8 +589,8 @@ const Main = () => {
           </div>
           {/* right side */}
           <div className=" text-black">
-            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[25rem] md:w-[19rem]">
-              <div>
+            <form class="flex flex-wrap lg:flex-row md:flex-col sm:ml-10 ms:ml-5 lg:w-[35rem]  md:w-[19rem]">
+              <div className="">
                 <p className="text-black lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
                   First Name
                 </p>
@@ -660,10 +660,11 @@ const Main = () => {
                 </p>
                 <input
                   type="text"
-                  className="msg-input sm:w-[90%] ms:w-[100%] focus:outline-none"
+                  className="msg-input sm:w-[100%] ms:w-[90%] focus:outline-none"
                   placeholder="Write your message..."
                 />
               </div>
+              <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">Submit</button>
             </form>
           </div>
         </div>
