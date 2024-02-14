@@ -7,8 +7,7 @@ const Main = () => {
 
   return (
     <>
-      <div
-        className="flex md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
+      <div className="flex md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
         {/* left container */}
         <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0   ">
           <div className="flex items-center rounded-xl 1xl:w-[22rem] md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
@@ -41,12 +40,13 @@ const Main = () => {
         <div className="md:w-[400px] sm:w-[550px] border-black] sm:block ms:hidden">
           <img src={require(`./Images/logo_1.png`)} alt="" />
         </div>
-        <div className="h-[65%] w-[80%] absolute top-36 left-20"
-        style={{
-          backgroundImage: `url(${require("./Images/bg_logo.png")})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-        }}
+        <div
+          className="h-[65%] w-[80%] absolute top-36 left-20"
+          style={{
+            backgroundImage: `url(${require("./Images/bg_logo.png")})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
       </div>
       <div className="bg-blue w-full h-9 mt-20"></div>
@@ -510,7 +510,6 @@ const Main = () => {
             xl:h-[8rem] xl:w-[8rem] xl:left-[19rem] xl:top-[234rem]
             1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-[19rem] 1xl:top-[268rem]
              "
-            
             style={{
               backgroundImage: `url(${require("./Images/TS-3.png")})`,
               backgroundSize: "cover",
@@ -693,7 +692,9 @@ const Main = () => {
                   placeholder="Write your message..."
                 />
               </div>
-              <button className="nav-btn 1xl:text-2xl text-base bg-purple rounded-3xl lg:mt-0 lg:w-[25%] md:w-[40%] px-4 py-2 mt-5 text-white  ms:block ">Submit</button>
+              <button className="nav-btn 1xl:text-2xl text-base bg-purple rounded-3xl lg:mt-0 lg:w-[25%] md:w-[40%] px-4 py-2 mt-5 text-white  ms:block ">
+                Submit
+              </button>
             </form>
           </div>
         </div>
