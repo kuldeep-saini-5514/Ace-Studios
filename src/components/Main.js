@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ThankYou from "./ThankYou";
 import axios from "axios";
+import data from "./Carousel/data.json";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const Main = () => {
   const [color, setColor] = useState("#ffe710");
@@ -34,6 +37,26 @@ const Main = () => {
         
       });
   }
+  const [currentIndex, setCurrentIndex] = useState();
+
+  function handleChange(index) {
+    setCurrentIndex(index);
+  }
+
+  const renderSlides = data.map((comment, index) => (
+    <div key={index}>
+      {/* Paragraph */}
+      <p className="text-gray lg:text-base ms:text-sm lg:pr-8 md:pr-0">{comment.Comment}</p>
+      {/* User */}
+      <div className="flex justify-end pr-8">
+        <div className="flex flex-col sm:ml-5 ms:ml-10 justify-center">
+          <p className="p-0 font-semibold m-0 lg:text-base md:text-sm ms:text-xl">
+            {comment.Person}
+          </p>
+        </div>
+      </div>
+    </div>
+  ));
   
 
   return (
@@ -119,7 +142,7 @@ const Main = () => {
           ms:w-[95%] ms:m-0 gap-0 ms:h-[13rem]
           "
           >
-            <i class="fa-solid fa-gears text-4xl  text-purple"></i>
+            <i class="fa-solid fa-mobile text-4xl  text-purple"></i>
             <p className="1xl:text-3xl lg:text-2xl ms:text-xl  font-semibold ms:mb-0">
               Mobile App Development
             </p>
@@ -177,7 +200,8 @@ const Main = () => {
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
-            <i class="fa-solid fa-lock text-2xl text-purple"></i>
+       
+            <i class="fa-solid fa-vr-cardboard text-2xl text-purple"></i>
             <p className="1xl:text-3xl lg:text-2xl ms:text-2xl font-semibold ms:mb-0">
               AR Solution
             </p>
@@ -584,41 +608,23 @@ const Main = () => {
             Doesn't feel like an agency
           </p>
           {/* icons */}
-          <div className="text-yellow mb-2 mt-2">
+          {/* <div className="text-yellow mb-2 mt-2">
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
-          </div>
+          </div> */}
           {/* icons */}
-          <p className="text-gray 1xl:text-xl lg:text-base ms:text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            doloribus voluptatibus minus tempore corporis, sapiente culpa quos
-            temporibus expedita sequi omnis commodi! Eligendi, beatae animi ut
-            praesentium possimus natus totam! Voluptates quidem earum nemo
-            harum, pariatur soluta cumque eaque molestias aut facilis
-          </p>
-          {/* User */}
-          <div className="flex">
-            {/* left */}
-            <div
-              className="1xl:w-[8rem] 1xl:h-[8rem] sm:w-[4rem] sm:h-[4rem] ms:w-[7rem] ms:h-[7rem] rounded-xl"
-              style={{
-                backgroundImage: `url(${require("./Images/TS-logo.png")})`,
-                backgroundSize: "100% 110%",
-              }}
-            ></div>
-            {/* right */}
-            <div className="flex flex-col sm:ml-5 ms:ml-10 justify-center">
-              <p className="p-0 font-semibold m-0 1xl:text-xl lg:text-base md:text-sm ms:text-xl">
-                Gwen Stacy
-              </p>
-              <p className="p-0 m-0 text-gray mt-2 1xl:text-xl lg:text-base md:text-sm ms:text-xl">
-                Cloudexter
-              </p>
-            </div>
-          </div>
+          <Carousel
+            showArrows={true}
+            autoPlay={true}
+            infiniteLoop={true}
+            showStatus={false}
+            className="carousel-container"
+          >
+            {renderSlides}
+          </Carousel>
         </div>
       </div>
       {/* //Contact  */}

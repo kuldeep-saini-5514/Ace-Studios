@@ -36,7 +36,11 @@ body{
   .slide-in {
     right: 24rem;
   }
+  /* testimonial css */
 
+  .carousel-container{
+    max-width: 750px;
+  }
   /* Services box shadow */
 
   #services-box{
@@ -79,6 +83,9 @@ body{
     .contact-input{
       width: 60vw;
     }
+    .carousel-container{
+      max-width: 320px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -86,11 +93,23 @@ body{
         margin-right: 0rem;
         width: 35vw;
       }
+      .carousel-container{
+        max-width: 350px;
+      }
   }
+  @media (min-width: 425px) {
+   
+    .carousel-container{
+      max-width: 350px;
+    }
+}
 
   @media (min-width: 1024px){
     .contact-input{
       width: 23vw;
+    }
+    .carousel-container{
+      max-width: 450px;
     }
   }
 
