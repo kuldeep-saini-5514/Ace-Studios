@@ -26,7 +26,7 @@ const MenuBar = ({setHandlebtn}) => {
         <Link to={"contact"}>
         <button className="mr-6 text-base bg-purple rounded-3xl px-4 py-2 text-white">Connect with us</button>
         </Link>
-        <div onClick={()=>setHandlebtn(false)}><i class="fa-solid fa-xmark"></i></div>
+        <div onClick={()=>setHandlebtn(false)}><i class="fa-solid fa-xmark text-xl"></i></div>
         </div>
                       {/* Nagivate */}
         <div className='flex flex-col gap-y-4 mb-8'>

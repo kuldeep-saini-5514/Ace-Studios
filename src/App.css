@@ -161,3 +161,12 @@ body{
     display: none;
   }
 
+  .thankyou{
+    transition: all 0.5 ease-in-out;
+    transform: scale(0);
+  }
+
+  #popup{
+    visibility: visible;
+    transform: scale(1);
+  }
