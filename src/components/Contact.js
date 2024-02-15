@@ -198,7 +198,7 @@ const Contact = () => {
               placeholder="Write your message..."
             />
           </div>
-          <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">
+          <button className="nav-btn   text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white md:w-[10rem] md:h-[3rem] ms:w-[12rem] ms:h-[3rem] ms:block ">
                 Submit
               </button>
               {response && <ThankYou setResponse={setResponse}/>}
