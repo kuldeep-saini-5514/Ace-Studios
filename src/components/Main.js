@@ -604,9 +604,9 @@ const Main = () => {
           <p className="font-semibold 1xl:text-5xl lg:text-4xl 1xl:w-[35rem] 1xl:leading-tight leading-10 sm:w-[25rem]  ms:text-2xl md:mt-10">
             Meet Client Satisfaction After Working With Us
           </p>
-          <p className="font-semibold 1xl:text-xl lg:text-base m-0 p-0 ms:text-sm">
+          {/* <p className="font-semibold 1xl:text-xl lg:text-base m-0 p-0 ms:text-sm">
             Doesn't feel like an agency
-          </p>
+          </p> */}
           {/* icons */}
           {/* <div className="text-yellow mb-2 mt-2">
             <i class="fa-solid fa-star 1xl:text-2xl"></i>
@@ -651,7 +651,7 @@ const Main = () => {
             </div>
             <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-mobile mr-10 text-purple"></i>
-              <span>+919720623941</span>
+              <p>9720623941</p>
             </div>
             <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6  1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-envelope mr-10 text-purple"></i>
@@ -796,8 +796,9 @@ const Main = () => {
           <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">
                 Submit
               </button>
-              {response && <ThankYou setResponse={setResponse}/>}
+             
         </form>
+        {response && <h4 className="mt-2">Thanks for Contacting !!! </h4>}
       </div>
     </div>
   </div>

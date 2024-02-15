@@ -5,7 +5,7 @@ const Privacy = () => {
     <div>
         <div class="m-4 mx-6 term-contianer">
             <h4>Privacy Policy</h4>
-<p className='text-black'>Welcome to Finick! This Privacy Policy outlines how we collect, use, and safeguard the information you provide when accessing or using our website (www.finick.com) and our services. Your privacy is important to us, and we are committed to protecting your personal information. By accessing our website or using our services, you consent to the practices described in this Privacy Policy.</p>
+<p className='text-black'>Welcome to Finick! This Privacy Policy outlines how we collect, use, and safeguard the information you provide when accessing or using our website (www.finick.xyz) and our services. Your privacy is important to us, and we are committed to protecting your personal information. By accessing our website or using our services, you consent to the practices described in this Privacy Policy.</p>
 
 <h4>Information We Collect</h4>
 <ul>
@@ -44,7 +44,7 @@ const Privacy = () => {
 <p className='text-black'>We reserve the right to modify or amend this Privacy Policy at any time. Any changes will be effective immediately upon the posting of the revised Privacy Policy.</p>
 
 <h4>Contact Us</h4>
-<p className='text-black'>If you have any questions or concerns about this Privacy Policy, please contact us at info@finick.com.</p>
+<p className='text-black'>If you have any questions or concerns about this Privacy Policy, please contact us at abhinay@finick.xyz</p>
 <br/><br/>
 <h5>Thank you for choosing Finick! </h5>
     </div>

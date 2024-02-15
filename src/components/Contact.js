@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
             <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-mobile mr-10 text-purple"></i>
-              <span>+919720623941</span>
+              <span>9720623941</span>
             </div>
             <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6  1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-envelope mr-10 text-purple"></i>
@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
             <div className="bg-white h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 mr-5 1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-globe mr-10 text-purple"></i>
-              <span>www.finick.com</span>
+              <span>www.finick.xyz</span>
             </div>
             <div className="bg-white h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 1xl:h-12 1xl:w-12 1xl:p-4">
               <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
