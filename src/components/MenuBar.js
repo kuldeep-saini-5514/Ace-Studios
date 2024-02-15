@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import React  from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const MenuBar = ({setHandlebtn}) => {
   const navigate=useNavigate();

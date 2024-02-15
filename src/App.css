@@ -22,6 +22,7 @@ body{
 }
 .menu-bar {
     position:absolute;
+    top: 0;
     right: 0rem;
     animation: move 0.5s ease-in-out;
     transform: translateX(100%);  
@@ -34,6 +35,17 @@ body{
   
   .slide-in {
     right: 24rem;
+  }
+
+  /* Services box shadow */
+
+  #services-box{
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #services-box:hover{
+    transform: scale(1.01 );
+    box-shadow: 0px 8px 25px rgba(104, 84, 252, 0.5);
   }
 
   .contact-input{
@@ -50,6 +62,18 @@ body{
     border-bottom: 1px solid #6854fc;
 
   } 
+
+  #button{
+    cursor: pointer;
+  }
+
+  #work-img{
+    transition: all 0.5s ease-in-out;
+  }
+
+  #work-img:hover{
+    transform: scale(1.2);
+  }
 
   @media (min-width: 320px) {
     .contact-input{

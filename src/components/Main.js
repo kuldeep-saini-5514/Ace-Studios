@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Main = () => {
   const [color, setColor] = useState("#ffe710");
@@ -7,7 +7,7 @@ const Main = () => {
 
   return (
     <>
-      <div className="flex md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
+      <div className="flex  md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
         {/* left container */}
         <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0   ">
           <div className="flex items-center rounded-xl 1xl:w-[22rem] md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
@@ -29,7 +29,8 @@ const Main = () => {
           {/* buttons container */}
           <div className="flex items-center mt-4 gap-x-10 ">
             <button
-              className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white"
+              id="button"
+              className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white "
               onClick={() => navigate("contact")}
             >
               Connect with us
@@ -41,7 +42,7 @@ const Main = () => {
           <img src={require(`./Images/logo_1.png`)} alt="" />
         </div>
         <div
-          className="h-[65%] w-[80%] absolute top-36 left-20"
+          className="h-[65%] w-[80%] absolute top-36 left-20 -z-50"
           style={{
             backgroundImage: `url(${require("./Images/bg_logo.png")})`,
             backgroundSize: "contain",
@@ -77,6 +78,7 @@ const Main = () => {
         "
         >
           <div
+            id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
           md:w-[48%] md:m-0 md:gap-2
@@ -95,6 +97,7 @@ const Main = () => {
             </p>
           </div>
           <div
+            id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
             1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
@@ -114,6 +117,7 @@ const Main = () => {
             </p>
           </div>
           <div
+            id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
             1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
@@ -132,6 +136,7 @@ const Main = () => {
             </p>
           </div>
           <div
+            id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
           md:w-[48%] md:m-0 md:gap-2
           1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
@@ -190,46 +195,55 @@ const Main = () => {
       "
       >
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/ig-1.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/2.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/3.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/4.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/5.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/6.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/7.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/8.png`)}
           alt=""
         />
         <img
+          id="work-img"
           className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/9.png`)}
           alt=""
