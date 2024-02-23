@@ -1,42 +1,55 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ThankYou from "./ThankYou";
+import { motion } from "framer-motion";
 import axios from "axios";
 import data from "./Carousel/data.json";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Main = () => {
   const [color, setColor] = useState("#ffe710");
   const navigate = useNavigate();
-  const [firstName,setFirstName]=useState('');
-  const [lastName,setLastName]=useState('');
-  const [email,setEmail]=useState('');
-  const [phone,setPhone]=useState('');
-  const [check,setCheck]=useState([]);
-  const [message,setMessage]=useState('');
-  const [response,setResponse]=useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [check, setCheck] = useState([]);
+  const [message, setMessage] = useState("");
+  const [response, setResponse] = useState(false);
+  useEffect(() => {
+    AOS.init({
+      duration:  1000,
+    });
+  }, []);
 
-  const handleSubmit=async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const data={FirstName:firstName,
-      LastName:lastName,
-      Email:email,
-      Phone:phone,
-      Check:check,
-      Message:message}
-      console.log(data);
-     await axios.post('https://sheet.best/api/sheets/3e1356a4-7043-4b4a-955a-56341508e156', data).then(response => {
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPhone('');
+    const data = {
+      FirstName: firstName,
+      LastName: lastName,
+      Email: email,
+      Phone: phone,
+      Check: check,
+      Message: message,
+    };
+    console.log(data);
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/3e1356a4-7043-4b4a-955a-56341508e156",
+        data
+      )
+      .then((response) => {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhone("");
         setCheck([]);
-        setMessage('');
+        setMessage("");
         setResponse(true);
-        
       });
-  }
+  };
   const [currentIndex, setCurrentIndex] = useState();
 
   function handleChange(index) {
@@ -46,7 +59,9 @@ const Main = () => {
   const renderSlides = data.map((comment, index) => (
     <div key={index}>
       {/* Paragraph */}
-      <p className="text-gray lg:text-base ms:text-sm lg:pr-8 md:pr-0">{comment.Comment}</p>
+      <p className="text-gray lg:text-base ms:text-sm lg:pr-8 md:pr-0">
+        {comment.Comment}
+      </p>
       {/* User */}
       <div className="flex justify-end pr-8">
         <div className="flex flex-col sm:ml-5 ms:ml-10 justify-center">
@@ -57,31 +72,46 @@ const Main = () => {
       </div>
     </div>
   ));
-  
+
+  const transition = {
+    duration: 1,
+    type: "spring",
+  };
 
   return (
     <>
-      <div className="flex  md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
+      <div
+        className="md:h-[80vh] lg:h-[62vh]  xl:h-[66vh] 2xl:h-[62vh]  w-[88vw] absolute top-36 left-20 -z-50 md:block ms:hidden"
+        style={{
+          backgroundImage: `url(${require("./Images/bg_logo.png")})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+      <div className="flex   md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
         {/* left container */}
-        <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0   ">
-          <div className="flex items-center rounded-xl 1xl:w-[22rem] md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
+        <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        >
+          <div className="flex items-center rounded-xl 2xl:w-[22rem] md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
             <i
-              className="fa-solid fa-circle fa-2xl 1xl:text-4xl  md:text-2xl sm:text-2xl ms:text-xl"
+              className="fa-solid fa-circle fa-3xl 2xl:text-4xl  md:text-3xl sm:text-3xl ms:text-xl"
               style={{ color: `${color}` }}
             ></i>
-            <p className="md:ml-4 text-black 1xl:text-xl md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ms:mb-0 ms:ml-2 ms:text-base">
+            <p className="md:ml-4 text-black 2xl:text-xl md:text-base sm:text-sm sm:m-0 sm:ml-4 sm:pt-0 ms:mb-0 ms:ml-2 ms:text-base">
               #1 Digital company in the town!
             </p>
           </div>
-          <h1 className="text-black 1xl:text-5xl 1xl:w-[22rem] md:text-4xl font-bold sm:text-2xl md:w-[18rem] sm:w-[12rem] mm:text-4xl ms:text-3xl ">
+          <h1 className="text-black 2xl:text-5xl 2xl:w-[22rem] md:text-4xl font-bold sm:text-3xl md:w-[18rem] sm:w-[12rem] mm:text-4xl ms:text-3xl ">
             Tech Solutions Tailored for Growth
           </h1>
-          <p className="text-gray w-[95%] 1xl:text-xl lg:text-base md:text-sm ms:text-sm sm:m-0  ms:mb-0">
+          <p className="text-gray w-[95%] 2xl:text-xl lg:text-base md:text-sm ms:text-sm sm:m-0 ms:mb-0">
             Simplify your digital journey, maximize your return on innovation.
             Let's grow your business together.
           </p>
           {/* buttons container */}
-          <div className="flex items-center mt-4 gap-x-10 ">
+          <div className="flex items-center mt-4 gap-x-10  ">
             <button
               id="button"
               className="text-base bg-purple rounded-3xl px-4 py-2  ms:text-base  text-white "
@@ -93,16 +123,11 @@ const Main = () => {
         </div>
         {/* right container */}
         <div className="md:w-[400px] sm:w-[550px] border-black] sm:block ms:hidden">
-          <img src={require(`./Images/logo_1.png`)} alt="" />
+          <img src={require(`./Images/logo_1.png`)} alt="" 
+          data-aos="fade-up"
+          data-aos-delay="300"
+          />
         </div>
-        <div
-          className="h-[65%] w-[80%] absolute top-36 left-20 -z-50"
-          style={{
-            backgroundImage: `url(${require("./Images/bg_logo.png")})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
       </div>
       <div className="bg-blue w-full h-9 mt-20"></div>
 
@@ -115,10 +140,10 @@ const Main = () => {
       ms:mx-2
       "
       >
-        <h1 className="1xl:text-5xl lg:text-4xl md:text-2xl sm:text-2xl ms:text-2xl sm:font-medium ms:font-bold">
+        <h1 className="2xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl ms:text-3xl sm:font-medium ms:font-bold">
           Services That Lead The Way To Better Business
         </h1>
-        <p className="md:w-[80%] sm:w-[90%] 1xl:text-xl lg:text-base md:text-sm ms:text-sm md:mt-0 text-gray ms:mt-5">
+        <p className="md:w-[80%] sm:w-[90%] 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:mt-0 text-gray ms:mt-5">
           Welcome to Finick, where we pave the path to digital success with our
           comprehensive suite of innovative IT services. As your strategic
           partner in the digital realm, we specialize in:
@@ -134,7 +159,7 @@ const Main = () => {
           <div
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
-            1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
+            2xl:gap-4 2xl:w-[46%] 2xl:h-[20rem]
           md:w-[48%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
@@ -143,10 +168,10 @@ const Main = () => {
           "
           >
             <i class="fa-solid fa-mobile text-4xl  text-purple"></i>
-            <p className="1xl:text-3xl lg:text-2xl ms:text-xl  font-semibold ms:mb-0">
+            <p className="2xl:text-3xl lg:text-2xl ms:text-xl  font-semibold ms:mb-0">
               Mobile App Development
             </p>
-            <p className=" text-black ms:text-sm 1xl:text-xl lg:text-base ms:text-sm ms:mb-0 ">
+            <p className=" text-black ms:text-sm 2xl:text-xl lg:text-base ms:text-sm ms:mb-0 ">
               Unleash the Power of Mobile with Custom App Development
             </p>
           </div>
@@ -154,18 +179,18 @@ const Main = () => {
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
-            1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
+            2xl:gap-4 2xl:w-[46%] 2xl:h-[20rem]
           lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] ml:h-[15rem] 
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
-            <i class="fa-solid fa-code text-2xl text-purple"></i>
-            <p className="1xl:text-3xl lg:text-2xl ms:text-2xl font-semibold ms:mb-0">
+            <i class="fa-solid fa-code text-3xl text-purple"></i>
+            <p className="2xl:text-3xl lg:text-2xl ms:text-3xl font-semibold ms:mb-0">
               Website Development
             </p>
-            <p className=" text-black ms:text-sm 1xl:text-xl lg:text-base ms:text-sm ms:mb-0">
+            <p className=" text-black ms:text-sm 2xl:text-xl lg:text-base ms:text-sm ms:mb-0">
               Craft Powerful Digital Experiences with Cutting-Edge Web
               Development
             </p>
@@ -174,18 +199,18 @@ const Main = () => {
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
-            1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
+            2xl:gap-4 2xl:w-[46%] 2xl:h-[20rem]
           lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] ml:h-[15rem]
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
-            <i class="fa-solid fa-palette text-2xl text-purple"></i>
-            <p className="1xl:text-3xl lg:text-2xl ms:text-2xl font-semibold ms:mb-0">
+            <i class="fa-solid fa-palette text-3xl text-purple"></i>
+            <p className="2xl:text-3xl lg:text-2xl ms:text-3xl font-semibold ms:mb-0">
               Design
             </p>
-            <p className=" text-black ms:text-sm 1xl:text-xl lg:text-base ms:text-sm ms:mb-0">
+            <p className=" text-black ms:text-sm 2xl:text-xl lg:text-base ms:text-sm ms:mb-0">
               Elevate Your Brand with Strategic Web & App Design Solutions
             </p>
           </div>
@@ -193,19 +218,18 @@ const Main = () => {
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
           md:w-[48%] md:m-0 md:gap-2
-          1xl:gap-4 1xl:w-[46%] 1xl:h-[20rem]
+          2xl:gap-4 2xl:w-[46%] 2xl:h-[20rem]
           lg:w-[45%] lg:h-[15rem] 
           xl:w-[35%] xl:h-[15rem]
           sm:w-[80%] ml:h-[15rem]
           ms:w-[95%] ms:m-0 ms:h-[13rem]
           "
           >
-       
-            <i class="fa-solid fa-vr-cardboard text-2xl text-purple"></i>
-            <p className="1xl:text-3xl lg:text-2xl ms:text-2xl font-semibold ms:mb-0">
+            <i class="fa-solid fa-vr-cardboard text-3xl text-purple"></i>
+            <p className="2xl:text-3xl lg:text-2xl ms:text-3xl font-semibold ms:mb-0">
               AR Solution
             </p>
-            <p className=" text-black ms:text-sm 1xl:text-xl lg:text-base ms:text-sm ms:mb-0">
+            <p className=" text-black ms:text-sm 2xl:text-xl lg:text-base ms:text-sm ms:mb-0">
               Reimagine Your Business with Immersive Augmented Reality Solutions
             </p>
           </div>
@@ -218,10 +242,10 @@ const Main = () => {
         <div className="ms:p-2">
           <p
             className="font-semibold
-          1xl:text-5xl
+          2xl:text-5xl
           lg:text-4xl
-          md:text-2xl
-          ms:text-2xl sm:mb-2
+          md:text-3xl
+          ms:text-3xl sm:mb-2
 
           "
           >
@@ -231,7 +255,7 @@ const Main = () => {
             className="text-gray  mt-4
           md:text-sm lg:text-base 
           ms:text-sm
-          1xl:text-xl
+          2xl:text-xl
           "
           >
             We partner with awesome companies like yours, building cool stuff
@@ -251,55 +275,55 @@ const Main = () => {
       >
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/ig-1.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/2.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/3.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/4.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/5.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/6.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/7.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/8.png`)}
           alt=""
         />
         <img
           id="work-img"
-          className="1xl:h-20 lg:h-16 md:h-10 ms:h-14 "
+          className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/9.png`)}
           alt=""
         />
@@ -330,28 +354,32 @@ const Main = () => {
           "
           >
             <h1
-              className="1xl:text-5xl lg:text-4xl md:text-2xl ms:text-3xl ms:mt-5 text-black font-semibold 
+              className="2xl:text-5xl lg:text-4xl md:text-3xl ms:text-3xl ms:mt-5 text-black font-semibold 
             "
             >
               Our Process{" "}
             </h1>
-            <p className="text-gray 1xl:text-xl lg:text-base lg:mt-2 md:text-sm ms:text-sm md:m-0 ms:mt-2 ">
+            <p className="text-gray 2xl:text-xl lg:text-base lg:mt-2 md:text-sm ms:text-sm md:m-0 ms:mt-2 ">
               {" "}
               Your vision, our expertise. From websites to AR, we craft tailored
               solutions through a collaborative process, unlocking success for
               every project.
             </p>
-            <div className="flex flex-col lg:gap-5 lg:mt-10 md:mt-5 1xl:gap-10 md:gap-2">
+            <div className="flex flex-col lg:gap-5 lg:mt-10 md:mt-5 2xl:gap-10 md:gap-2">
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-skin 1xl:h-14 1xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
-                    <i class="fa-solid fa-rocket 1xl:text-2xl text-xl text-brown"></i>
+                  <div className="flex justify-center items-center bg-skin 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                    <img
+                      src={require(`./Images/discovery.jpeg`)}
+                      alt=""
+                      className="h-8"
+                    />
                   </div>
-                  <p className="text-black 1xl:text-3xl lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
+                  <p className="text-black 2xl:text-2xl lg:text-  xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
                     Discovery
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 1xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Dive deep into your vision: We actively listen and understand
                   your unique goals, challenges, and audience. Strategic
@@ -361,14 +389,22 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightblue 1xl:h-14 1xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
-                    <i class="fa-solid fa-lightbulb 1xl:text-2xl text-xl text-DarkBlue"></i>
+                  <div className="flex justify-center items-center bg-lightblue 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                    <img
+                      src={require(`./Images/plan-icon.jpeg`)}
+                      alt=""
+                      className="h-8"
+                    />
+                    <img
+                      src={require(`./Images/delivery-truck-icon.svg`)}
+                      alt=""
+                    />
                   </div>
-                  <p className="text-black 1xl:text-3xl lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
+                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
                     Plan
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 1xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   We craft a clear roadmap together, leveraging expertise to
                   guide your project. Flexibility is key; we adapt to your
@@ -377,14 +413,18 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightgreen 1xl:h-14 1xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
-                    <i class="fa-solid fa-rocket 1xl:text-2xl text-xl text-green"></i>
+                  <div className="flex justify-center items-center bg-lightgreen 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                    <img
+                      src={require(`./Images/Execute-icon.jpeg`)}
+                      alt=""
+                      className="h-8"
+                    />
                   </div>
-                  <p className="text-black 1xl:text-3xl lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
+                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
                     Execute
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 1xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Seamless teamwork ensures efficient delivery with rigorous
                   quality control. Regular feedback keeps you informed and
@@ -393,14 +433,18 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightyellow 1xl:h-14 1xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
-                    <i class="fa-solid fa-rocket 1xl:text-2xl text-lg text-DarkYellow"></i>
+                  <div className="flex justify-center items-center bg-lightyellow 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                    <img
+                      src={require(`./Images/deliver.jpeg`)}
+                      alt=""
+                      className="h-6"
+                    />
                   </div>
-                  <p className="text-black 1xl:text-3xl lg:text-2xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
+                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
                     Deliver
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 1xl:text-xl lg:text-base ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
                   {" "}
                   Exceeding expectations, we deliver a product that aligns
                   perfectly with your goals. Beyond launch, ongoing support
@@ -416,13 +460,13 @@ const Main = () => {
       {/* //Center box  */}
       <div className="flex sm:flex-row ms:flex-col bg-LightGray sm:p-10 sm:m-5 mt-12 mb-12 ms:p-5 ms:gap-10 ms:mb-5">
         {/* left box */}
-        <div className="sm:w-[90rem] sm:h-[10rem] 1xl:text-3xl lg:text-3xl ms:text-2xl font-semibold">
+        <div className="sm:w-[90rem] sm:h-[10rem] 2xl:text-3xl lg:text-3xl ms:text-3xl font-semibold">
           We’re a lean creative agency that uses design and code to solve
           problems.
         </div>
         {/* right box */}
         <div>
-          <p className="sm:pl-10 sm:ml-4 sm:h-[10rem] 1xl:text-xl lg:text-lg ms:text-sm sm:border-l-[3px] sm:border-Gray  text-gray ">
+          <p className="sm:pl-10 sm:ml-4 sm:h-[10rem] 2xl:text-xl lg:text-lg ms:text-sm sm:border-l-[3px] sm:border-Gray  text-gray ">
             We don't just build solutions, we tailor them to your unique needs.
             From data-driven insights to agile collaboration, we work closely
             with you to deliver cutting-edge solutions that drive real results.
@@ -438,7 +482,7 @@ const Main = () => {
         <div>
           <img
             className="
-            1xl:h-[35rem] 1xl:w-[50rem]
+            2xl:h-[35rem] 2xl:w-[50rem]
             lg:h-[30rem] lg:w-[40rem] rounded-xl  m-2
             md:h-[25rem] md:w-[25rem]
             ms:h-[22rem] ms:w-[95%]
@@ -454,10 +498,10 @@ const Main = () => {
         ms:pl-3 ms:pt-5
         "
         >
-          <p className="1xl:text-5xl 1xl:w-[30rem] lg:text-4xl ms:text-2xl m-0 w-[20rem] font-semibold">
+          <p className="2xl:text-5xl 2xl:w-[30rem] lg:text-4xl ms:text-3xl m-0 w-[20rem] font-semibold">
             Designed and built by an astonishing creative team.
           </p>
-          <p className="text-gray m-0 1xl:text-xl lg:text-base md:text-base lg:w-[28rem] md:w-[20rem] ms:text-sm">
+          <p className="text-gray m-0 2xl:text-xl lg:text-base md:text-base lg:w-[28rem] md:w-[20rem] ms:text-sm">
             Empowering businesses with innovative solutions and tangible
             results, our expert team is dedicated to helping you reach your
             objectives with confidence.
@@ -476,7 +520,7 @@ const Main = () => {
             md:static md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem] lg:left-[10rem] 
             xl:h-[8rem] xl:w-[8rem] xl:left-[14rem]
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-[13rem]
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:left-[13rem]
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-1.png")})`,
@@ -491,7 +535,7 @@ const Main = () => {
             md:static md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[6rem] lg:h-[6rem] lg:left-[20rem] lg:top-[214rem] 
             xl:h-[7rem] xl:w-[7rem] xl:left-[25rem] xl:top-[214rem]
-            1xl:h-[8rem] 1xl:w-[8rem] 1xl:left-[25rem] 1xl:top-[244rem]
+            2xl:h-[8rem] 2xl:w-[8rem] 2xl:left-[25rem] 2xl:top-[244rem]
               "
             style={{
               backgroundImage: `url(${require("./Images/TS-2.png")})`,
@@ -506,7 +550,7 @@ const Main = () => {
             md:static md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem] lg:top-[218rem] lg:left-5 
             xl:h-[8rem] xl:w-[8rem] xl:top-[218rem] xl:left-10
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:top-[248rem] 1xl:left-7
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:top-[248rem] 2xl:left-7
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-3.png")})`,
@@ -521,7 +565,7 @@ const Main = () => {
             md:static md:top-[201rem] md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem]   lg:left-[9rem] lg:top-[224rem]
             xl:h-[8rem] xl:w-[8rem] xl:left-[13rem] xl:top-[224rem]
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-[11rem] 1xl:top-[258rem]
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:left-[11rem] 2xl:top-[258rem]
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-4.png")})`,
@@ -535,7 +579,7 @@ const Main = () => {
             md:static top-[201rem] md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem] lg:left-[18rem] lg:top-[223rem] 
             xl:h-[8rem] xl:w-[8rem] xl:left-[24rem] xl:top-[223rem]
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-[23rem] 1xl:top-[255rem]
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:left-[23rem] 2xl:top-[255rem]
              "
             style={{
               backgroundImage: `url(${require("./Images/TS-5.png")})`,
@@ -549,7 +593,7 @@ const Main = () => {
             md:static top-[201rem] md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[6rem] lg:h-[6rem]  lg:left-[27rem] lg:top-[220rem]
             xl:h-[6rem] xl:w-[6rem]  xl:left-[34rem] xl:top-[218rem]
-            1xl:h-[7rem] xl:w-[7rem]  1xl:left-[35rem] 1xl:top-[250rem]
+            2xl:h-[7rem] xl:w-[7rem]  2xl:left-[35rem] 2xl:top-[250rem]
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-6.jpeg")})`,
@@ -563,7 +607,7 @@ const Main = () => {
             md:static top-[208rem] md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem] lg:left-5 lg:top-[230rem] 
             xl:h-[8rem] xl:w-[8rem] xl:left-10 xl:top-[228rem] 
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-5 1xl:top-[262rem] 
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:left-5 2xl:top-[262rem] 
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-8.png")})`,
@@ -577,7 +621,7 @@ const Main = () => {
             md:static top-[208rem] md:w-[6rem] md:h-[6rem]
             lg:absolute  lg:w-[7rem] lg:h-[7rem] lg:left-[14rem] lg:top-[232rem] 
             xl:h-[8rem] xl:w-[8rem] xl:left-[19rem] xl:top-[234rem]
-            1xl:h-[9rem] 1xl:w-[9rem] 1xl:left-[19rem] 1xl:top-[268rem]
+            2xl:h-[9rem] 2xl:w-[9rem] 2xl:left-[19rem] 2xl:top-[268rem]
              "
             style={{
               backgroundImage: `url(${require("./Images/TS-3.png")})`,
@@ -591,7 +635,7 @@ const Main = () => {
             md:static top-[208rem] md:w-[6rem] md:h-[6rem]
             lg:absolute lg:w-[7rem] lg:h-[7rem]  lg:left-[24rem] lg:top-[231rem]
             xl:h-[8rem] xl:w-[8rem]  xl:left-[33rem] xl:top-[231rem]
-            1xl:h-[9rem] 1xl:w-[9rem]  1xl:left-[33rem] 1xl:top-[265rem]
+            2xl:h-[9rem] 2xl:w-[9rem]  2xl:left-[33rem] 2xl:top-[265rem]
             "
             style={{
               backgroundImage: `url(${require("./Images/TS-9.png")})`,
@@ -601,19 +645,19 @@ const Main = () => {
         </div>
         {/* right */}
         <div>
-          <p className="font-semibold 1xl:text-5xl lg:text-4xl 1xl:w-[35rem] 1xl:leading-tight leading-10 sm:w-[25rem]  ms:text-2xl md:mt-10">
+          <p className="font-semibold 2xl:text-5xl lg:text-4xl 2xl:w-[35rem] 2xl:leading-tight leading-10 sm:w-[25rem]  ms:text-3xl md:mt-10">
             Meet Client Satisfaction After Working With Us
           </p>
-          {/* <p className="font-semibold 1xl:text-xl lg:text-base m-0 p-0 ms:text-sm">
+          {/* <p className="font-semibold 2xl:text-xl lg:text-base m-0 p-0 ms:text-sm">
             Doesn't feel like an agency
           </p> */}
           {/* icons */}
           {/* <div className="text-yellow mb-2 mt-2">
-            <i class="fa-solid fa-star 1xl:text-2xl"></i>
-            <i class="fa-solid fa-star 1xl:text-2xl"></i>
-            <i class="fa-solid fa-star 1xl:text-2xl"></i>
-            <i class="fa-solid fa-star 1xl:text-2xl"></i>
-            <i class="fa-solid fa-star 1xl:text-2xl"></i>
+            <i class="fa-solid fa-star 2xl:text-3xl"></i>
+            <i class="fa-solid fa-star 2xl:text-3xl"></i>
+            <i class="fa-solid fa-star 2xl:text-3xl"></i>
+            <i class="fa-solid fa-star 2xl:text-3xl"></i>
+            <i class="fa-solid fa-star 2xl:text-3xl"></i>
           </div> */}
           {/* icons */}
           <Carousel
@@ -629,179 +673,213 @@ const Main = () => {
       </div>
       {/* //Contact  */}
       <div>
-    <div className="flex-col 1xl:mt-14 sm:mt-10 ms:mt-10  text-center">
-    <h3 className="1xl:text-5xl lg:text-4xl ms:text-3xl">Contact us</h3>
-    <p className="text-gray 1xl:text-xl lg:text-base md:mt-3 ms:text-sm sm:pt-0 ms:pt-2">
-      Let’s talk how we can help you !!
-      </p>
-    </div>
+        <div className="flex-col 2xl:mt-14 sm:mt-10 ms:mt-10  text-center">
+          <h3 className="2xl:text-5xl lg:text-4xl ms:text-3xl">Contact us</h3>
+          <p className="text-gray 2xl:text-xl lg:text-base md:mt-3 ms:text-sm sm:pt-0 ms:pt-2">
+            Let’s talk how we can help you !!
+          </p>
+        </div>
 
-    <div className="flex sm:flex-row ms:flex-col-reverse lg::m-10 md:m-5  text-white bg-white shadow-2xl md:mt-0 rounded-3xl">
-      {/* //left side */}
-      <div className="bg-purple text-white rounded-xl sm:px-8 py-6 xl:w-[30rem] lg:w-[24rem] sm:h-[40rem] lg:w-[40rem] md:w-[20rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10">
+        <div className="flex sm:flex-row ms:flex-col-reverse lg::m-10 md:m-5  text-white bg-white shadow-3xl md:mt-0 rounded-3xl">
+          {/* //left side */}
+          <div className="bg-purple text-white rounded-xl sm:px-8 py-6 xl:w-[30rem] lg:w-[24rem] sm:h-[40rem] lg:w-[40rem] md:w-[20rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10">
             <div>
-              <p className="1xl:text-3xl text-2xl font-semibold mb-2">
+              <p className="2xl:text-3xl text-3xl font-semibold mb-2">
                 {" "}
                 Contact Information
               </p>
-              <p className="mb-10 1xl:text-2xl lg:text-xl ms:text-sm text-Gray">
+              <p className="mb-10 2xl:text-3xl lg:text-xl ms:text-sm text-Gray">
                 {" "}
                 If you like to work with us then drop us a message
               </p>
             </div>
-            <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 1xl:h-12 1xl:w-12 1xl:p-4">
+            <div className="bg-white  h-10 w-10 flex items-center p-3.5 2xl:text-xl  lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
               <i class="fa-solid fa-mobile mr-10 text-purple"></i>
-              <p>9720623941</p>
+              <span>9720623941</span>
             </div>
-            <div className="bg-white  h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6  1xl:h-12 1xl:w-12 1xl:p-4">
-              <i class="fa-solid fa-envelope mr-10 text-purple"></i>
+            <div className="bg-white  h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6  2xl:h-12 2xl:w-12 2xl:p-4">
+              <i class="fa-solid fa-envelope mr-9 text-purple"></i>
               <span>abhinay@finick.xyz</span>
             </div>
-            <div className="bg-white h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 mr-5 1xl:h-12 1xl:w-12 1xl:p-4">
-              <i class="fa-solid fa-globe mr-10 text-purple"></i>
+            <div className="bg-white h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
+              <i class="fa-solid fa-globe mr-9 text-purple"></i>
               <span>www.finick.com</span>
             </div>
-            <div className="bg-white h-10 w-10 flex p-3 1xl:text-xl lg:text-base rounded-full mb-6 1xl:h-12 1xl:w-12 1xl:p-4">
+            <div className="bg-white h-10 w-10 flex items-center p-3.5 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
               <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
               <span>India</span>
             </div>
-      </div>
-      {/* right side */}
-      <div className=" text-black">
-      <form onSubmit={handleSubmit} className="flex flex-wrap lg:flex-row md:flex-col sm:ml-5 ms:ml-5 1xl:w-[55rem] xl:w-[45rem] lg:w-[35rem] lg:gap-10  md:w-[23rem]">
-          <div>
-          <p className="text-black  1xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
-              First Name
-            </p>
-            <input onChange={(e)=>setFirstName(e.target.value)} value={firstName} className="contact-input" type="text" />
           </div>
-          <div>
-          <p className="text-black 1xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 lg:mt-2 md:mt-3 sm:mb-0">
-              Last Name
-            </p>
-            <input onChange={(e)=>setLastName(e.target.value)} value={lastName} className="contact-input" type="text" />
-          </div>
-          <div>
-          <p className="text-black 1xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
-              Email
-            </p>
-            <input onChange={(e)=>setEmail(e.target.value)} value={email} className="contact-input" type="email" />
-          </div>
-          <div>
-          <p className="text-black 1xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
-              Phone
-            </p>
-            <input onChange={(e)=>setPhone(e.target.value)} value={phone} className="contact-input" type="tel" />
-          </div>
-          <div className="w-[100%]">
-          <p className="lg:mt-0 ms:mt-8 md:mb-3 font-semibold 1xl:text-2xl  lg:text-xl ms:text-base">
-              What Services do you need?
-            </p>
-            <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 1xl:text-xl 1xl:mt-5">
-  <div>
-    <label className="container">
-      Web Design
-      <input
-        type="checkbox"
-        checked={check.includes('Web Design')}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCheck([...check, 'Web Design']);
-          } else {
-            setCheck(check.filter((item) => item !== 'Web Design'));
-          }
-        }}
-      />
-      <span className="checkmark"></span>
-    </label>
-  </div>
-  <div>
-    <label className="container">
-      App Design
-      <input
-        type="checkbox"
-        checked={check.includes('App Design')}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCheck([...check, 'App Design']);
-          } else {
-            setCheck(check.filter((item) => item !== 'App Design'));
-          }
-        }}
-      />
-      <span className="checkmark"></span>
-    </label>
-  </div>
-  <div>
-    <label className="container">
-      Graphic Design
-      <input
-        type="checkbox"
-        checked={check.includes('Graphic Design')}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCheck([...check, 'Graphic Design']);
-          } else {
-            setCheck(check.filter((item) => item !== 'Graphic Design'));
-          }
-        }}
-      />
-      <span className="checkmark"></span>
-    </label>
-  </div>
-  <div>
-    <label className="container">
-      Digital Marketing
-      <input
-        type="checkbox"
-        checked={check.includes('Digital Marketing')}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCheck([...check, 'Digital Marketing']);
-          } else {
-            setCheck(check.filter((item) => item !== 'Digital Marketing'));
-          }
-        }}
-      />
-      <span className="checkmark"></span>
-    </label>
-  </div>
-  <div>
-    <label className="container">
-      Other
-      <input
-        type="checkbox"
-        checked={check.includes('Other')}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCheck([...check, 'Other']);
-          } else {
-            setCheck(check.filter((item) => item !== 'Other'));
-          }
-        }}
-      />
-      <span className="checkmark"></span>
-    </label>
-  </div>
-</div>
-<p className="lg:mt-10 1xl:text-2xl lg:text-xl ms:text-lg ms:mt-4 md:mb-2 font-semibold ">
-              Message
-            </p>
-            <input onChange={(e)=>setMessage(e.target.value)} value={message}
-              type="text"
-              className="msg-input sm:w-[90%] ms:w-[90%] focus:outline-none"
-              placeholder="Write your message..."
-            />
-          </div>
-          <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">
+          {/* right side */}
+          <div className=" text-black">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-wrap lg:flex-row md:flex-col sm:ml-5 ms:ml-5 2xl:w-[55rem] xl:w-[45rem] lg:w-[35rem] lg:gap-10  md:w-[23rem]"
+            >
+              <div>
+                <p className="text-black  2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
+                  First Name
+                </p>
+                <input
+                  onChange={(e) => setFirstName(e.target.value)}
+                  value={firstName}
+                  className="contact-input"
+                  type="text"
+                />
+              </div>
+              <div>
+                <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 lg:mt-2 md:mt-3 sm:mb-0">
+                  Last Name
+                </p>
+                <input
+                  onChange={(e) => setLastName(e.target.value)}
+                  value={lastName}
+                  className="contact-input"
+                  type="text"
+                />
+              </div>
+              <div>
+                <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+                  Email
+                </p>
+                <input
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                  className="contact-input"
+                  type="email"
+                />
+              </div>
+              <div>
+                <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
+                  Phone
+                </p>
+                <input
+                  onChange={(e) => setPhone(e.target.value)}
+                  value={phone}
+                  className="contact-input"
+                  type="tel"
+                />
+              </div>
+              <div className="w-[100%]">
+                <p className="lg:mt-0 ms:mt-8 md:mb-3 font-semibold 2xl:text-3xl  lg:text-xl ms:text-base">
+                  What Services do you need?
+                </p>
+                <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 2xl:text-xl 2xl:mt-5">
+                  <div>
+                    <label className="container">
+                      Web Design
+                      <input
+                        type="checkbox"
+                        checked={check.includes("Web Design")}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setCheck([...check, "Web Design"]);
+                          } else {
+                            setCheck(
+                              check.filter((item) => item !== "Web Design")
+                            );
+                          }
+                        }}
+                      />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container">
+                      App Design
+                      <input
+                        type="checkbox"
+                        checked={check.includes("App Design")}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setCheck([...check, "App Design"]);
+                          } else {
+                            setCheck(
+                              check.filter((item) => item !== "App Design")
+                            );
+                          }
+                        }}
+                      />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container">
+                      Graphic Design
+                      <input
+                        type="checkbox"
+                        checked={check.includes("Graphic Design")}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setCheck([...check, "Graphic Design"]);
+                          } else {
+                            setCheck(
+                              check.filter((item) => item !== "Graphic Design")
+                            );
+                          }
+                        }}
+                      />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container">
+                      Digital Marketing
+                      <input
+                        type="checkbox"
+                        checked={check.includes("Digital Marketing")}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setCheck([...check, "Digital Marketing"]);
+                          } else {
+                            setCheck(
+                              check.filter(
+                                (item) => item !== "Digital Marketing"
+                              )
+                            );
+                          }
+                        }}
+                      />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <label className="container">
+                      Other
+                      <input
+                        type="checkbox"
+                        checked={check.includes("Other")}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setCheck([...check, "Other"]);
+                          } else {
+                            setCheck(check.filter((item) => item !== "Other"));
+                          }
+                        }}
+                      />
+                      <span className="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <p className="lg:mt-10 2xl:text-3xl lg:text-xl ms:text-lg ms:mt-4 md:mb-2 font-semibold ">
+                  Message
+                </p>
+                <input
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
+                  type="text"
+                  className="msg-input sm:w-[90%] ms:w-[90%] focus:outline-none"
+                  placeholder="Write your message..."
+                />
+              </div>
+              <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">
                 Submit
               </button>
-             
-        </form>
-        {response && <h4 className="mt-2">Thanks for Contacting !!! </h4>}
+            </form>
+            {response && <h4 className="mt-2">Thanks for Contacting !!! </h4>}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
     </>
   );
 };

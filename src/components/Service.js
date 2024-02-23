@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      duration:  1200,
+    });
+  }, []);
+
   return (
     <>
-      <div className="ml-34">
+      <div className="ml-34"
+         data-aos="fade-top"
+         data-aos-delay="100">
+        
         <div className="m-5 p-3">
-          <p className="text-center p-0 m-0 lg:text-4xl  ms:text-2xl font-semibold">
+          <p className="text-center p-0 m-0 lg:text-4xl  ms:text-3xl font-semibold">
             Services We Provided
           </p>
           <p className="text-center p-0 m-0 lg:text-base ms:text-sm lg:mt-5 ms:mt-2 text-gray">
@@ -25,6 +36,8 @@ const Service = () => {
         "
         >
           <div
+          data-aos="fade-right"
+          data-aos-delay="100"
             className="flex flex-col  md:h-[12rem] w-[35%] shadow-lg rounded-xl sm:p-10 m-6
           md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -43,6 +56,8 @@ const Service = () => {
             </p>
           </div>
           <div
+           data-aos="fade-left"
+           data-aos-delay="100"
             className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
             md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -51,7 +66,7 @@ const Service = () => {
           ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5
           "
           >
-            <i class="fa-solid fa-code text-2xl text-purple"></i>
+            <i class="fa-solid fa-code text-3xl text-purple"></i>
             <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
               Website Development
             </p>
@@ -60,7 +75,9 @@ const Service = () => {
               interaction.
             </p>
           </div>
-          <div
+          <div 
+            data-aos="fade-up"
+            data-aos-delay="100"
             className="flex flex-col gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
             md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -69,7 +86,7 @@ const Service = () => {
           ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5
           "
           >
-            <i class="fa-solid fa-palette text-2xl text-purple"></i>
+            <i class="fa-solid fa-palette text-3xl text-purple"></i>
             <p className="lg:text-2xl ms:text-lg font-semibold ms:mb-0">
               Graphic Design
             </p>
@@ -79,6 +96,8 @@ const Service = () => {
             </p>
           </div>
           <div
+          data-aos="fade-up"
+          data-aos-delay="100"
             className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
           md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -87,7 +106,7 @@ const Service = () => {
           ms:w-[80%] ms:m-0 ms:gap-2 ms:h-[12rem] ms:px-4 ms:py-5 
           "
           >
-            <i class="fa-solid fa-lock text-2xl  text-purple"></i>
+            <i class="fa-solid fa-lock text-3xl  text-purple"></i>
             <p className="lg:text-2xl ms:text-xl font-semibold ms:mb-0">
               Digital Marketing
             </p>
@@ -100,7 +119,10 @@ const Service = () => {
 
         {/* small content  */}
         <div className="flex flex-wrap  sm:flex-row ms:flex-col-reverse xl:px-24 ms:px-5 ms:py-5 bg-lightgray mt-20">
-          <div className="inline-block w-2/4">
+          <div className="inline-block w-2/4"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          >
             <h3 className="sm:text-3xl mb-2 lg:w-[25rem]  md:w-[20rem] ms:w-[25rem] ms:text-xl sm:mt-0 ms:mt-5 font-bold">
               {" "}
               Bringing Your Online Dreams to Life, Together!
@@ -116,6 +138,8 @@ const Service = () => {
           </div>
           <div className="sm:w-2/4 ms:w-[98%] ">
             <img
+            data-aos="fade-left"
+            data-aos-delay="100"
               className="rounded-xl"
               src={require(`./Images/standup.jpeg`)}
               alt=""

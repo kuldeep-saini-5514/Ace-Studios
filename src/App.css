@@ -19,6 +19,7 @@ body{
   width: 100vw;
   overflow-x: hidden  ;
   scroll-behavior: smooth;
+  margin-top: 6rem;
 }
 .menu-bar {
     position:absolute;
