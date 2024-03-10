@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* contatct-btn */}
       <div className="flex justify-between gap-x-10 " id="nav-right">
         <Link to={"contact"}>
-          <button className="nav-btn text-base bg-purple 2xl:text-xl rounded-3xl px-4 py-2 text-white  md:block ">
+          <button id="button" className="nav-btn text-base bg-purple 2xl:text-xl rounded-3xl px-4 py-2 text-white  md:block ">
             Connect with us
           </button>
         </Link>

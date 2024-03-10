@@ -17,25 +17,21 @@ const MenuBar = ({ setHandlebtn }) => {
     }
   });
   function refreshPage() {
-    // navigate("/")
     window.scrollTo({ top: 0, behavior: "smooth" });
-    // window.addEventListener("scroll",()=>{
-    //   window.scrollTo({ top:  0, behavior: 'smooth' });
-    // })
   }
 
   return (
     <div className={`menu-bar ${setHandlebtn ? "slide-in" : ""}`}>
-      <div className="px-20 py-5 bg-white shadow-lg w-[27rem] rounded-xl h-[100vh] ms:h-full">
+      <div className="sm:px-20 ml:px-14 ms:px-10 py-5 bg-white shadow-lg sm:w-[27rem] ms:w-[85vw]     rounded-xl h-[100vh] ms:h-full">
         {/* Go back */}
-        <div className="flex items-center gap-x-10 gap-y-2 mb-8">
+        <div className="flex items-center justify-between gap-x-10 gap-y-2 mb-8">
           <Link to={"contact"}>
-            <button className="mr-6 text-base bg-purple rounded-3xl px-4 py-2 text-white">
+            <button className="sm:mr-6 ms:mr-0 text-base bg-purple rounded-3xl px-4 py-2 text-white">
               Connect with us
             </button>
           </Link>
           <div onClick={() => setHandlebtn(false)}>
-            <i class="fa-solid fa-xmark text-xl"></i>
+            <i class="fa-solid fa-xmark text-2xl"></i>
           </div>
         </div>
         {/* Nagivate */}
@@ -47,7 +43,7 @@ const MenuBar = ({ setHandlebtn }) => {
           </Link>
 
           <Link to={"/service"}>
-            <h1 className="text-black text-xl" onClick={cool}>
+            <h1 className="text-black text-xl" onClick={()=>{cool(); refreshPage();}}>
               Service
             </h1>
           </Link>
@@ -59,7 +55,7 @@ const MenuBar = ({ setHandlebtn }) => {
           </Link>
 
           <Link to={"/terms"}>
-            <h1 className="text-black text-xl" value="click" onClick="cool(); refreshPage()">
+            <h1 className="text-black text-xl" value="click" onClick={()=>{cool(); refreshPage();}}>
               Terms & Conditions
             </h1>
           </Link>

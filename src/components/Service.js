@@ -12,14 +12,17 @@ const Service = () => {
   return (
     <>
       <div className="ml-34"
-         data-aos="fade-top"
-         data-aos-delay="100">
+         >
         
         <div className="m-5 p-3">
-          <p className="text-center p-0 m-0 lg:text-4xl  ms:text-3xl font-semibold">
+          <p data-aos="zoom-out"
+         data-aos-delay="400"
+          className="text-center p-0 m-0 lg:text-4xl  ms:text-3xl font-semibold">
             Services We Provided
           </p>
-          <p className="text-center p-0 m-0 lg:text-base ms:text-sm lg:mt-5 ms:mt-2 text-gray">
+          <p data-aos="fade-up"
+         data-aos-delay="500"
+          className="text-center p-0 m-0 lg:text-base ms:text-sm lg:mt-5 ms:mt-2 text-gray">
             {" "}
             Empowering businesses with innovative web, app, and AR solutions,
             driving success through creativity, collaboration, and cutting-edge
@@ -37,7 +40,7 @@ const Service = () => {
         >
           <div
           data-aos="fade-right"
-          data-aos-delay="100"
+          data-aos-delay="500"
             className="flex flex-col  md:h-[12rem] w-[35%] shadow-lg rounded-xl sm:p-10 m-6
           md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -57,7 +60,7 @@ const Service = () => {
           </div>
           <div
            data-aos="fade-left"
-           data-aos-delay="100"
+           data-aos-delay="500"
             className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
             md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -77,7 +80,7 @@ const Service = () => {
           </div>
           <div 
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="500"
             className="flex flex-col gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
             md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -97,7 +100,7 @@ const Service = () => {
           </div>
           <div
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="500"
             className="flex flex-col  gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-10 m-6
           md:w-[45%] md:m-0 md:gap-2
           lg:w-[45%] lg:h-[15rem] lg:gap-4
@@ -121,7 +124,7 @@ const Service = () => {
         <div className="flex flex-wrap  sm:flex-row ms:flex-col-reverse xl:px-24 ms:px-5 ms:py-5 bg-lightgray mt-20">
           <div className="inline-block w-2/4"
           data-aos="fade-right"
-          data-aos-delay="100"
+          data-aos-delay="500"
           >
             <h3 className="sm:text-3xl mb-2 lg:w-[25rem]  md:w-[20rem] ms:w-[25rem] ms:text-xl sm:mt-0 ms:mt-5 font-bold">
               {" "}
@@ -139,7 +142,7 @@ const Service = () => {
           <div className="sm:w-2/4 ms:w-[98%] ">
             <img
             data-aos="fade-left"
-            data-aos-delay="100"
+            data-aos-delay="500"
               className="rounded-xl"
               src={require(`./Images/standup.jpeg`)}
               alt=""

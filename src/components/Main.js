@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import data from "./Carousel/data.json";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ThankYou from "./ThankYou";
 
 const Main = () => {
   const [color, setColor] = useState("#ffe710");
@@ -20,10 +20,13 @@ const Main = () => {
   const [response, setResponse] = useState(false);
   useEffect(() => {
     AOS.init({
-      duration:  1000,
+      duration: 1000,
     });
   }, []);
 
+  const refreshPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -48,6 +51,14 @@ const Main = () => {
         setCheck([]);
         setMessage("");
         setResponse(true);
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Prevent scrolling by the user
+        document.body.style.overflow = "hidden";
+        // Re-enable scrolling after a delay (e.g., 5 seconds)
+        setTimeout(() => {
+          document.body.style.overflow = "auto";
+        }, 50000);
       });
   };
   const [currentIndex, setCurrentIndex] = useState();
@@ -81,6 +92,8 @@ const Main = () => {
   return (
     <>
       <div
+        data-aos="fade-down"
+        data-aos-delay="500"
         className="md:h-[80vh] lg:h-[62vh]  xl:h-[66vh] 2xl:h-[62vh]  w-[88vw] absolute top-36 left-20 -z-50 md:block ms:hidden"
         style={{
           backgroundImage: `url(${require("./Images/bg_logo.png")})`,
@@ -90,9 +103,10 @@ const Main = () => {
       ></div>
       <div className="flex   md:mx-[4rem] sm:mx-[2rem] md:mt-20 sm:mt-10 my-[2rem]">
         {/* left container */}
-        <div className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0"
-        data-aos="fade-up"
-        data-aos-delay="100"
+        <div
+          className="w-[45rem] flex flex-col gap-y-4 ms:px-5 sm:p-0"
+          data-aos="fade-up"
+          data-aos-delay="500"
         >
           <div className="flex items-center rounded-xl 2xl:w-[22rem] md:w-[19rem] sm:w-[17rem]  md:px-2 sm:px-3 sm:py-2 mm:w-[90%] ml:w-[80%] ms:w-[100%] ms:py-4 ms:px-3   bg-lightgray">
             <i
@@ -123,13 +137,19 @@ const Main = () => {
         </div>
         {/* right container */}
         <div className="md:w-[400px] sm:w-[550px] border-black] sm:block ms:hidden">
-          <img src={require(`./Images/logo_1.png`)} alt="" 
-          data-aos="fade-up"
-          data-aos-delay="300"
+          <img
+            src={require(`./Images/logo_1.png`)}
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="800"
           />
         </div>
       </div>
-      <div className="bg-blue w-full h-9 mt-20"></div>
+      <div
+        data-aos="fade-up"
+        data-aos-delay="500"
+        className="bg-blue w-full h-9 mt-20"
+      ></div>
 
       {/* Services */}
       <div
@@ -140,10 +160,18 @@ const Main = () => {
       ms:mx-2
       "
       >
-        <h1 className="2xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl ms:text-3xl sm:font-medium ms:font-bold">
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="2xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl ms:text-3xl sm:font-medium ms:font-bold"
+        >
           Services That Lead The Way To Better Business
         </h1>
-        <p className="md:w-[80%] sm:w-[90%] 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:mt-0 text-gray ms:mt-5">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="500"
+          className="md:w-[80%] sm:w-[90%] 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:mt-0 text-gray ms:mt-5"
+        >
           Welcome to Finick, where we pave the path to digital success with our
           comprehensive suite of innovative IT services. As your strategic
           partner in the digital realm, we specialize in:
@@ -157,6 +185,8 @@ const Main = () => {
         "
         >
           <div
+            data-aos="fade-right"
+            data-aos-delay="500"
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             2xl:gap-4 2xl:w-[46%] 2xl:h-[20rem]
@@ -176,6 +206,8 @@ const Main = () => {
             </p>
           </div>
           <div
+            data-aos="fade-left"
+            data-aos-delay="500"
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
@@ -196,6 +228,8 @@ const Main = () => {
             </p>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-delay="500"
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
             md:w-[48%] md:m-0 md:gap-2
@@ -215,6 +249,8 @@ const Main = () => {
             </p>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-delay="500"
             id="services-box"
             className="flex flex-col justify-center items-center gap-4 md:h-[12rem] w-[35%] shadow-lg rounded-xl p-5 m-6
           md:w-[48%] md:m-0 md:gap-2
@@ -241,6 +277,8 @@ const Main = () => {
       <div className="flex justify-center items-center text-center mt-14 ">
         <div className="ms:p-2">
           <p
+            data-aos="fade-up"
+            data-aos-delay="400"
             className="font-semibold
           2xl:text-5xl
           lg:text-4xl
@@ -252,6 +290,8 @@ const Main = () => {
             Companies We Work With
           </p>
           <p
+            data-aos="fade-up"
+            data-aos-delay="500"
             className="text-gray  mt-4
           md:text-sm lg:text-base 
           ms:text-sm
@@ -274,54 +314,72 @@ const Main = () => {
       "
       >
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/ig-1.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/2.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/3.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/4.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/5.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/6.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/7.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/8.png`)}
           alt=""
         />
         <img
+          data-aos="zoom-in"
+          data-aos-delay="900"
           id="work-img"
           className="2xl:h-20 lg:h-16 md:h-10 ms:h-14 "
           src={require(`./Images/9.png`)}
@@ -338,6 +396,8 @@ const Main = () => {
         >
           <div>
             <img
+              data-aos="zoom-out"
+              data-aos-delay="500"
               className="rounded-xl  sm: sm:ml-0 sm:mt-10  sm:ml-0 ms:ml-0"
               src={require(`./Images/laptop-1.jpeg`)}
               alt=""
@@ -354,12 +414,18 @@ const Main = () => {
           "
           >
             <h1
+              data-aos="fade-left"
+              data-aos-delay="400"
               className="2xl:text-5xl lg:text-4xl md:text-3xl ms:text-3xl ms:mt-5 text-black font-semibold 
             "
             >
               Our Process{" "}
             </h1>
-            <p className="text-gray 2xl:text-xl lg:text-base lg:mt-2 md:text-sm ms:text-sm md:m-0 ms:mt-2 ">
+            <p
+              data-aos="fade-left"
+              data-aos-delay="500"
+              className="text-gray 2xl:text-xl lg:text-base lg:mt-2 md:text-sm ms:text-sm md:m-0 ms:mt-2 "
+            >
               {" "}
               Your vision, our expertise. From websites to AR, we craft tailored
               solutions through a collaborative process, unlocking success for
@@ -368,18 +434,31 @@ const Main = () => {
             <div className="flex flex-col lg:gap-5 lg:mt-10 md:mt-5 2xl:gap-10 md:gap-2">
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-skin 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    className="flex justify-center items-center bg-skin 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl"
+                  >
                     <img
                       src={require(`./Images/discovery.jpeg`)}
                       alt=""
-                      className="h-8"
+                      id="icon"
+                      className="h-8 rounded-lg"
                     />
                   </div>
-                  <p className="text-black 2xl:text-2xl lg:text-  xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
+                  <p
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="text-black 2xl:text-2xl lg:text-  xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 "
+                  >
                     Discovery
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0"
+                >
                   {" "}
                   Dive deep into your vision: We actively listen and understand
                   your unique goals, challenges, and audience. Strategic
@@ -389,22 +468,31 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightblue 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    className="flex justify-center items-center bg-lightblue 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl"
+                  >
                     <img
                       src={require(`./Images/plan-icon.jpeg`)}
                       alt=""
-                      className="h-8"
-                    />
-                    <img
-                      src={require(`./Images/delivery-truck-icon.svg`)}
-                      alt=""
+                      id="icon"
+                      className="h-8 rounded-lg"
                     />
                   </div>
-                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 ">
+                  <p
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0 "
+                  >
                     Plan
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0"
+                >
                   {" "}
                   We craft a clear roadmap together, leveraging expertise to
                   guide your project. Flexibility is key; we adapt to your
@@ -413,18 +501,31 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightgreen 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    className="flex justify-center items-center bg-lightgreen 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl"
+                  >
                     <img
                       src={require(`./Images/Execute-icon.jpeg`)}
                       alt=""
-                      className="h-8"
+                      id="icon"
+                      className="h-8 rounded-lg"
                     />
                   </div>
-                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
+                  <p
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0"
+                  >
                     Execute
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base md:text-sm ms:text-sm md:m-0 ms:pl-0 ms:pt-0"
+                >
                   {" "}
                   Seamless teamwork ensures efficient delivery with rigorous
                   quality control. Regular feedback keeps you informed and
@@ -433,18 +534,31 @@ const Main = () => {
               </div>
               <div className="text-black">
                 <div className="flex gap-4">
-                  <div className="flex justify-center items-center bg-lightyellow 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    className="flex justify-center items-center bg-lightyellow 2xl:h-14 2xl:w-14 sm:h-10 sm:w-10 ms:h-14 ms:w-14 rounded-xl"
+                  >
                     <img
                       src={require(`./Images/deliver.jpeg`)}
                       alt=""
-                      className="h-6"
+                      id="icon"
+                      className="h-6 rounded-lg"
                     />
                   </div>
-                  <p className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0">
+                  <p
+                    data-aos="fade-left"
+                    data-aos-delay="500"
+                    className="text-black 2xl:text-3xl lg:text-xl md:text-lg sm:text-xl ms:text-xl font-semibold md:m-0 ms:mt-4 ms:mb-0"
+                  >
                     Deliver
                   </p>
                 </div>
-                <p className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base ms:text-sm md:m-0 ms:pl-0 ms:pt-0">
+                <p
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  className="ms:pl-14 ms:pt-2 text-gray 2xl:text-xl lg:text-base ms:text-sm md:m-0 ms:pl-0 ms:pt-0"
+                >
                   {" "}
                   Exceeding expectations, we deliver a product that aligns
                   perfectly with your goals. Beyond launch, ongoing support
@@ -460,13 +574,21 @@ const Main = () => {
       {/* //Center box  */}
       <div className="flex sm:flex-row ms:flex-col bg-LightGray sm:p-10 sm:m-5 mt-12 mb-12 ms:p-5 ms:gap-10 ms:mb-5">
         {/* left box */}
-        <div className="sm:w-[90rem] sm:h-[10rem] 2xl:text-3xl lg:text-3xl ms:text-3xl font-semibold">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="500"
+          className="sm:w-[90rem] sm:h-[10rem] 2xl:text-3xl lg:text-3xl ms:text-3xl font-semibold"
+        >
           We’re a lean creative agency that uses design and code to solve
           problems.
         </div>
         {/* right box */}
         <div>
-          <p className="sm:pl-10 sm:ml-4 sm:h-[10rem] 2xl:text-xl lg:text-lg ms:text-sm sm:border-l-[3px] sm:border-Gray  text-gray ">
+          <p
+            data-aos="fade-down"
+            data-aos-delay="500"
+            className="sm:pl-10 sm:ml-4 sm:h-[10rem] 2xl:text-xl lg:text-lg ms:text-sm sm:border-l-[3px] sm:border-Gray  text-gray "
+          >
             We don't just build solutions, we tailor them to your unique needs.
             From data-driven insights to agile collaboration, we work closely
             with you to deliver cutting-edge solutions that drive real results.
@@ -481,6 +603,8 @@ const Main = () => {
         {/* left- image box */}
         <div>
           <img
+            data-aos="zoom-out"
+            data-aos-delay="500"
             className="
             2xl:h-[35rem] 2xl:w-[50rem]
             lg:h-[30rem] lg:w-[40rem] rounded-xl  m-2
@@ -498,10 +622,18 @@ const Main = () => {
         ms:pl-3 ms:pt-5
         "
         >
-          <p className="2xl:text-5xl 2xl:w-[30rem] lg:text-4xl ms:text-3xl m-0 w-[20rem] font-semibold">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className="2xl:text-5xl 2xl:w-[30rem] lg:text-4xl ms:text-3xl m-0 w-[20rem] font-semibold"
+          >
             Designed and built by an astonishing creative team.
           </p>
-          <p className="text-gray m-0 2xl:text-xl lg:text-base md:text-base lg:w-[28rem] md:w-[20rem] ms:text-sm">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className="text-gray m-0 2xl:text-xl lg:text-base md:text-base lg:w-[28rem] md:w-[20rem] ms:text-sm"
+          >
             Empowering businesses with innovative solutions and tangible
             results, our expert team is dedicated to helping you reach your
             objectives with confidence.
@@ -514,6 +646,9 @@ const Main = () => {
         {/* left */}
         <div className="lg:h-[30rem] w-[160rem] m-5 md:h-[24rem] md:flex md:flex-wrap lg:ml-5 md:ml-0 justify-evenly">
           <div
+            data-aos="fade-right"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block
@@ -529,6 +664,9 @@ const Main = () => {
           ></div>
 
           <div
+            data-aos="fade-left"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block 
@@ -544,6 +682,9 @@ const Main = () => {
           ></div>
 
           <div
+            data-aos="fade-up-right"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block
@@ -559,6 +700,9 @@ const Main = () => {
           ></div>
 
           <div
+            data-aos="zoom-out"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl 
             ms:hidden
             sm:block 
@@ -573,6 +717,9 @@ const Main = () => {
             }}
           ></div>
           <div
+            data-aos="zoom-out"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block 
@@ -587,6 +734,9 @@ const Main = () => {
             }}
           ></div>
           <div
+            data-aos="fade-up-left"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block 
@@ -601,7 +751,10 @@ const Main = () => {
             }}
           ></div>
           <div
-            className="rounded-xl
+            data-aos="fade-down-right"
+            data-aos-delay="500"
+            id="client-img"
+            className="client-img rounded-xl
             ms:hidden
             sm:block 
             md:static top-[208rem] md:w-[6rem] md:h-[6rem]
@@ -615,6 +768,9 @@ const Main = () => {
             }}
           ></div>
           <div
+            data-aos="fade-down"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block 
@@ -629,6 +785,9 @@ const Main = () => {
             }}
           ></div>
           <div
+            data-aos="fade-down-left"
+            data-aos-delay="500"
+            id="client-img"
             className="rounded-xl
             ms:hidden
             sm:block 
@@ -644,22 +803,10 @@ const Main = () => {
           ></div>
         </div>
         {/* right */}
-        <div>
+        <div data-aos="fade-left" data-aos-delay="500">
           <p className="font-semibold 2xl:text-5xl lg:text-4xl 2xl:w-[35rem] 2xl:leading-tight leading-10 sm:w-[25rem]  ms:text-3xl md:mt-10">
             Meet Client Satisfaction After Working With Us
           </p>
-          {/* <p className="font-semibold 2xl:text-xl lg:text-base m-0 p-0 ms:text-sm">
-            Doesn't feel like an agency
-          </p> */}
-          {/* icons */}
-          {/* <div className="text-yellow mb-2 mt-2">
-            <i class="fa-solid fa-star 2xl:text-3xl"></i>
-            <i class="fa-solid fa-star 2xl:text-3xl"></i>
-            <i class="fa-solid fa-star 2xl:text-3xl"></i>
-            <i class="fa-solid fa-star 2xl:text-3xl"></i>
-            <i class="fa-solid fa-star 2xl:text-3xl"></i>
-          </div> */}
-          {/* icons */}
           <Carousel
             showArrows={true}
             autoPlay={true}
@@ -674,49 +821,110 @@ const Main = () => {
       {/* //Contact  */}
       <div>
         <div className="flex-col 2xl:mt-14 sm:mt-10 ms:mt-10  text-center">
-          <h3 className="2xl:text-5xl lg:text-4xl ms:text-3xl">Contact us</h3>
-          <p className="text-gray 2xl:text-xl lg:text-base md:mt-3 ms:text-sm sm:pt-0 ms:pt-2">
+          <h3
+            data-aos="zoom-out"
+            data-aos-delay="500"
+            className="2xl:text-5xl lg:text-4xl ms:text-3xl"
+          >
+            Contact us
+          </h3>
+          <p
+            data-a
+            os="fade-up"
+            data-aos-delay="500"
+            className="text-gray 2xl:text-xl lg:text-base md:mt-3 ms:text-sm sm:pt-0 ms:pt-2"
+          >
             Let’s talk how we can help you !!
           </p>
         </div>
 
-        <div className="flex sm:flex-row ms:flex-col-reverse lg::m-10 md:m-5  text-white bg-white shadow-3xl md:mt-0 rounded-3xl">
+        <div className="flex sm:flex-row ms:flex-col-reverse lg::m-10  md:m-5  text-white bg-white shadow-3xl md:mt-10 rounded-3xl">
           {/* //left side */}
-          <div className="bg-purple text-white rounded-xl sm:px-8 py-6 xl:w-[30rem] lg:w-[24rem] sm:h-[40rem] lg:w-[40rem] md:w-[20rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10">
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="400"
+            className="bg-purple text-white rounded-xl sm:px-8 py-6 xl:w-[30rem] lg:w-[24rem] sm:h-[40rem] lg:w-[40rem] md:w-[20rem] md:mt-2 ms:m-3 ms:px-4 ms:mt-10"
+          >
             <div>
-              <p className="2xl:text-3xl text-3xl font-semibold mb-2">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="500"
+                className="2xl:text-3xl text-3xl font-semibold mb-2"
+              >
                 {" "}
                 Contact Information
               </p>
-              <p className="mb-10 2xl:text-3xl lg:text-xl ms:text-sm text-Gray">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="600"
+                className="mb-10 2xl:text-3xl lg:text-xl ms:text-sm text-Gray"
+              >
                 {" "}
                 If you like to work with us then drop us a message
               </p>
             </div>
-            <div className="bg-white  h-10 w-10 flex items-center p-3.5 2xl:text-xl  lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
-              <i class="fa-solid fa-mobile mr-10 text-purple"></i>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              className="bg-white  h-10 w-10 flex items-center p-3.5 2xl:text-xl  lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4"
+            >
+              <i
+                data-aos="fade-up"
+                data-aos-delay="600"
+                id="icon"
+                className="contact-icon fa-solid fa-mobile mr-10 text-purple"
+              ></i>
               <span>9720623941</span>
             </div>
-            <div className="bg-white  h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6  2xl:h-12 2xl:w-12 2xl:p-4">
-              <i class="fa-solid fa-envelope mr-9 text-purple"></i>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              className="bg-white  h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6  2xl:h-12 2xl:w-12 2xl:p-4"
+            >
+              <i
+                data-aos="fade-up"
+                data-aos-delay="700"
+                id="icon"
+                className="contact-icon fa-solid fa-envelope mr-9 text-purple"
+              ></i>
               <span>abhinay@finick.xyz</span>
             </div>
-            <div className="bg-white h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
-              <i class="fa-solid fa-globe mr-9 text-purple"></i>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="700"
+              className="bg-white h-10 w-10 flex items-center p-3 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4"
+            >
+              <i
+                data-aos="fade-up"
+                data-aos-delay="800"
+                id="icon"
+                className="contact-icon fa-solid fa-globe mr-9 text-purple hover:scale-125"
+              ></i>
               <span>www.finick.com</span>
             </div>
-            <div className="bg-white h-10 w-10 flex items-center p-3.5 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4">
-              <i class="fa-solid fa-location-dot mr-10 text-purple"></i>
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="800"
+              className="bg-white h-10 w-10 flex items-center p-3.5 2xl:text-xl lg:text-base rounded-full mb-6 2xl:h-12 2xl:w-12 2xl:p-4"
+            >
+              <i
+                data-aos="fade-up"
+                data-aos-delay="900"
+                id="icon"
+                className="contact-icon fa-solid fa-location-dot mr-10 text-purple"
+              ></i>
               <span>India</span>
             </div>
           </div>
           {/* right side */}
           <div className=" text-black">
             <form
+              data-aos="zoom-in"
+              data-aos-delay="400"
               onSubmit={handleSubmit}
               className="flex flex-wrap lg:flex-row md:flex-col sm:ml-5 ms:ml-5 2xl:w-[55rem] xl:w-[45rem] lg:w-[35rem] lg:gap-10  md:w-[23rem]"
             >
-              <div>
+              <div data-aos="fade-up" data-aos-delay="500">
                 <p className="text-black  2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 md:mb-0 sm:mt-8 md:mt-2">
                   First Name
                 </p>
@@ -727,7 +935,7 @@ const Main = () => {
                   type="text"
                 />
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="500">
                 <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 lg:mt-2 md:mt-3 sm:mb-0">
                   Last Name
                 </p>
@@ -738,7 +946,7 @@ const Main = () => {
                   type="text"
                 />
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="500">
                 <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Email
                 </p>
@@ -749,7 +957,7 @@ const Main = () => {
                   type="email"
                 />
               </div>
-              <div>
+              <div data-aos="fade-up" data-aos-delay="500">
                 <p className="text-black 2xl:text-xl lg:text-lg ms:text-base m-0 lg:mb-2 ms:mt-8 md:mt-3 md:mb-0">
                   Phone
                 </p>
@@ -761,11 +969,15 @@ const Main = () => {
                 />
               </div>
               <div className="w-[100%]">
-                <p className="lg:mt-0 ms:mt-8 md:mb-3 font-semibold 2xl:text-3xl  lg:text-xl ms:text-base">
+                <p
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="lg:mt-0 ms:mt-8 md:mb-3 font-semibold 2xl:text-3xl  lg:text-xl ms:text-base"
+                >
                   What Services do you need?
                 </p>
                 <div className="flex lg:flex-wrap  lg:gap-x-20 lg:gap-y-5 lg:flex-row ms:flex-col ms:gap-y-2 2xl:text-xl 2xl:mt-5">
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay="500">
                     <label className="container">
                       Web Design
                       <input
@@ -784,7 +996,7 @@ const Main = () => {
                       <span className="checkmark"></span>
                     </label>
                   </div>
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay="600">
                     <label className="container">
                       App Design
                       <input
@@ -803,7 +1015,7 @@ const Main = () => {
                       <span className="checkmark"></span>
                     </label>
                   </div>
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay="700">
                     <label className="container">
                       Graphic Design
                       <input
@@ -822,7 +1034,7 @@ const Main = () => {
                       <span className="checkmark"></span>
                     </label>
                   </div>
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay="800">
                     <label className="container">
                       Digital Marketing
                       <input
@@ -843,7 +1055,7 @@ const Main = () => {
                       <span className="checkmark"></span>
                     </label>
                   </div>
-                  <div>
+                  <div data-aos="fade-up" data-aos-delay="900">
                     <label className="container">
                       Other
                       <input
@@ -861,10 +1073,16 @@ const Main = () => {
                     </label>
                   </div>
                 </div>
-                <p className="lg:mt-10 2xl:text-3xl lg:text-xl ms:text-lg ms:mt-4 md:mb-2 font-semibold ">
+                <p
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="lg:mt-10 2xl:text-3xl lg:text-xl ms:text-lg ms:mt-4 md:mb-2 font-semibold "
+                >
                   Message
                 </p>
                 <input
+                  data-aos="fade-up"
+                  data-aos-delay="700"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                   type="text"
@@ -872,14 +1090,29 @@ const Main = () => {
                   placeholder="Write your message..."
                 />
               </div>
-              <button className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block ">
+              <button
+                data-aos="zoom-in-up"
+                data-aos-delay="500"
+                id="button"
+                className="nav-btn text-base bg-purple rounded-3xl px-4 py-2 mt-5 text-white  ms:block "
+              >
                 Submit
               </button>
             </form>
-            {response && <h4 className="mt-2">Thanks for Contacting !!! </h4>}
+            {response && <ThankYou />}
           </div>
         </div>
       </div>
+      <button
+        data-aos="zoom-in"
+        data-aos-delay="500"
+        className="button-up"
+        onClick={refreshPage}
+      >
+        <svg className="svgIcon" viewBox="0 0 384 512">
+          <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+        </svg>
+      </button>
     </>
   );
 };
